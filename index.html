@@ -164,6 +164,13 @@ table{ border-collapse:collapse; width:100%; }
 
 /* ============ 03. UTILIDADES Y LAYOUT ============ */
 .container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad-x); }
+
+/* Las celdas de grilla no bajan de su min-content por defecto: un hijo ancho
+   (la tabla comparativa, por ejemplo) estiraría la columna y con ella la página.
+   Con min-width:0 la columna puede achicarse y el contenido ancho hace scroll
+   dentro de su propio contenedor. */
+.soc__layout > *,.contact > *,.loc > *,.faq > *,.about > *,
+.rubros__layout > *,.cards > *,.steps > *{ min-width:0; }
 .section{ padding-block:var(--section-y); position:relative; }
 
 .section--ink{ background:var(--ink); color:var(--on-ink); }
