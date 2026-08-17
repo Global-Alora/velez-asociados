@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0B0D">
+
+<!-- =========================================================
+     SEO — Título y descripción (long-tail + geo local)
+     ========================================================= -->
+<title>Estudio Contable Vélez &amp; Asociados | Contador para PyMEs en Córdoba</title>
+<meta name="description" content="Estudio contable y consultora PyME en Córdoba capital. Liquidación de sueldos, impuestos municipales, provinciales y nacionales, balances y constitución de SAS, SRL y SA. Ayacucho 395, Piso 7 Of. C.">
+<meta name="keywords" content="estudio contable Córdoba, contador PyME Córdoba, liquidación de sueldos Córdoba, constitución de SAS Córdoba, balances, asesoramiento impositivo, monotributo, Ingresos Brutos, Convenio Multilateral">
+<meta name="author" content="Estudio Contable Vélez &amp; Asociados">
+<!-- ⚠️ PREVIEW: noindex mientras la web vive en la URL de demo.
+     AL PUBLICAR EN estudiovyasociados.com.ar, reemplazar esta línea por:
+     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"> -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.estudiovyasociados.com.ar/">
+
+<!-- GEO / Local SEO -->
+<meta name="geo.region" content="AR-X">
+<meta name="geo.placename" content="Córdoba, Argentina">
+<meta name="geo.position" content="-31.418400;-64.187300">
+<meta name="ICBM" content="-31.418400, -64.187300">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Estudio Contable Vélez &amp; Asociados">
+<meta property="og:title" content="Estudio Contable Vélez &amp; Asociados | Contador para PyMEs en Córdoba">
+<meta property="og:description" content="Sueldos, impuestos, balances y constitución de sociedades. Consultora PyME en Córdoba capital con criterio técnico y respuestas concretas.">
+<meta property="og:url" content="https://www.estudiovyasociados.com.ar/">
+<meta property="og:image" content="https://www.estudiovyasociados.com.ar/og-velez-asociados.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Estudio Contable Vélez &amp; Asociados | Córdoba">
+<meta name="twitter:description" content="Consultora PyME en Córdoba: sueldos, impuestos, balances y sociedades.">
+
+<!-- Fuentes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Favicon (marca V inline) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0B0D'/%3E%3Cg fill='none' stroke='%23F6F4F0' stroke-width='4'%3E%3Cpath d='M24 22 L50 78 L76 22'/%3E%3C/g%3E%3C/svg%3E">
+
+<style>
+/* =========================================================================
+   VÉLEZ & ASOCIADOS — Hoja de estilos única
+   ---------------------------------------------------------------------
+   ÍNDICE
+   01. Tokens de diseño (color, tipografía, espaciado)
+   02. Reset y base
+   03. Utilidades y layout
+   04. Componentes: botones, etiquetas, marca
+   05. Barra de progreso + Header + Navegación
+   06. Hero
+   07. Franja de credenciales / métricas
+   08. Ticker de especialidades
+   09. Servicios
+   10. Sociedades (tabla comparativa)
+   11. Proceso de trabajo
+   12. Sectores
+   13. Nosotros
+   14. Preguntas frecuentes
+   15. Contacto (formulario + mapa)
+   16. Footer + barra móvil de acción
+   17. Animaciones de aparición
+   18. Responsive
+   ========================================================================= */
+
+/* ============ 01. TOKENS ============ */
+:root{
+  /* Color */
+  --ink:        #0A0B0D;
+  --ink-2:      #101216;
+  --ink-3:      #171A1F;
+  --ink-line:   rgba(246,244,240,.11);
+  --ink-line-2: rgba(246,244,240,.22);
+
+  --paper:      #F6F4F0;
+  --paper-2:    #EFEBE4;
+  --paper-3:    #E3DED4;
+
+  --text:       #12141A;
+  --text-2:     #4A4F59;
+  --text-3:     #7A8089;
+  --on-ink:     #F6F4F0;
+  --on-ink-2:   rgba(246,244,240,.66);
+  --on-ink-3:   rgba(246,244,240,.42);
+
+  --gold:       #C0A265;
+  --gold-soft:  #DFC894;
+  --gold-dim:   rgba(192,162,101,.16);
+
+  /* Tipografía */
+  --font-display: "Instrument Serif", "Times New Roman", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --step--1: clamp(.8rem, .78rem + .1vw, .875rem);
+  --step-0:  clamp(.95rem, .92rem + .15vw, 1.0625rem);
+  --step-1:  clamp(1.1rem, 1.03rem + .3vw, 1.3rem);
+  --step-2:  clamp(1.45rem, 1.3rem + .7vw, 1.9rem);
+  --step-3:  clamp(1.9rem, 1.6rem + 1.4vw, 2.9rem);
+  --step-4:  clamp(2.4rem, 1.8rem + 2.6vw, 4.2rem);
+  --step-5:  clamp(2.9rem, 1.9rem + 4.2vw, 5.6rem);
+
+  /* Espaciado y forma */
+  --pad-x: clamp(1.25rem, 4vw, 3.5rem);
+  --section-y: clamp(4.5rem, 9vw, 8.5rem);
+  --maxw: 1240px;
+  --maxw-narrow: 780px;
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+
+  /* Texturas */
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+/* ============ 02. RESET Y BASE ============ */
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--text);
+  font-family:var(--font-sans);
+  font-size:var(--step-0);
+  font-weight:400;
+  line-height:1.65;
+  letter-spacing:-.005em;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+body.is-locked{ overflow:hidden; }
+img,svg,iframe{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+button,input,select,textarea{ font:inherit; color:inherit; }
+h1,h2,h3,h4{ margin:0; font-weight:400; letter-spacing:-.02em; line-height:1.06; }
+p{ margin:0; }
+ul,ol{ margin:0; padding:0; list-style:none; }
+table{ border-collapse:collapse; width:100%; }
+
+:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:3px;
+  border-radius:2px;
+}
+::selection{ background:var(--gold); color:var(--ink); }
+
+.skip-link{
+  position:absolute; left:1rem; top:-4rem; z-index:200;
+  background:var(--ink); color:var(--on-ink);
+  padding:.75rem 1.25rem; border-radius:var(--r-sm);
+  font-size:var(--step--1); font-weight:500;
+  transition:top .25s var(--ease);
+}
+.skip-link:focus{ top:1rem; }
+
+/* ============ 03. UTILIDADES Y LAYOUT ============ */
+.container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad-x); }
+.section{ padding-block:var(--section-y); position:relative; }
+
+.section--ink{ background:var(--ink); color:var(--on-ink); }
+.section--ink::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:var(--noise); opacity:.035; mix-blend-mode:screen;
+}
+.section--paper-2{ background:var(--paper-2); }
+
+.display{ font-family:var(--font-display); font-weight:400; letter-spacing:-.015em; }
+.display em{ font-style:italic; color:var(--gold); }
+.section--ink .display em{ color:var(--gold-soft); }
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:.7rem;
+  font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--text-3);
+}
+.section--ink .eyebrow{ color:var(--on-ink-3); }
+.eyebrow::before{
+  content:""; width:28px; height:1px; background:var(--gold); flex:none;
+}
+
+.section-head{ max-width:720px; }
+.section-head h2{ font-size:var(--step-3); margin-top:1.1rem; }
+.section-head p{
+  margin-top:1.15rem; color:var(--text-2);
+  font-size:1rem; line-height:1.7; max-width:52ch; letter-spacing:-.002em;
+}
+.section--ink .section-head p{ color:var(--on-ink-2); }
+
+/* Encabezado centrado (secciones sin columna derecha) */
+.section-head--center{ max-width:780px; margin-inline:auto; text-align:center; }
+.section-head--center h2{ font-size:var(--step-3); }
+.section-head--center .eyebrow{ justify-content:center; }
+.section-head--center p{ margin-inline:auto; }
+
+.lead{ font-size:1rem; line-height:1.7; color:var(--text-2); }
+.muted{ color:var(--text-2); }
+.rule{ height:1px; background:var(--paper-3); border:0; margin:0; }
+.section--ink .rule{ background:var(--ink-line); }
+
+/* ============ 04. COMPONENTES ============ */
+/* -- Marca -- */
+.brand{ display:inline-flex; align-items:center; gap:.8rem; }
+.brand__mark{ width:38px; height:38px; flex:none; }
+.brand__mark path,.brand__mark rect,.brand__mark circle{
+  transition:stroke .4s var(--ease), opacity .4s var(--ease);
+}
+.brand:hover .brand__mark .mk-geo{ opacity:1; stroke:var(--gold); }
+.brand__text{ display:flex; flex-direction:column; line-height:1; }
+.brand__name{
+  font-family:var(--font-display); font-size:1.16rem; letter-spacing:.005em;
+}
+.brand__tag{
+  font-size:.575rem; letter-spacing:.19em; text-transform:uppercase;
+  color:var(--on-ink-3); margin-top:.32rem; font-weight:500; white-space:nowrap;
+}
+
+/* -- Botones -- */
+.btn{
+  --btn-bg:var(--gold); --btn-fg:var(--ink); --btn-bd:var(--gold);
+  position:relative; display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+  padding:.95rem 1.7rem; border:1px solid var(--btn-bd); background:var(--btn-bg); color:var(--btn-fg);
+  font-size:var(--step--1); font-weight:600; letter-spacing:.02em;
+  border-radius:999px; cursor:pointer; overflow:hidden; white-space:nowrap;
+  transition:transform .35s var(--ease-out), box-shadow .35s var(--ease), background .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease);
+}
+.btn span{ position:relative; z-index:1; }
+.btn svg{ position:relative; z-index:1; width:16px; height:16px; transition:transform .35s var(--ease-out); }
+.btn:hover{ transform:translateY(-2px); box-shadow:0 12px 28px -12px rgba(192,162,101,.65); }
+.btn:hover svg{ transform:translateX(4px); }
+.btn:active{ transform:translateY(0); }
+
+.btn--ghost{ --btn-bg:transparent; --btn-fg:var(--text); --btn-bd:var(--paper-3); }
+.btn--ghost:hover{ --btn-bd:var(--text); box-shadow:none; }
+.section--ink .btn--ghost,.hero .btn--ghost{ --btn-fg:var(--on-ink); --btn-bd:var(--ink-line-2); }
+.section--ink .btn--ghost:hover,.hero .btn--ghost:hover{ --btn-bd:var(--on-ink); background:rgba(246,244,240,.06); }
+
+.btn--dark{ --btn-bg:var(--ink); --btn-fg:var(--on-ink); --btn-bd:var(--ink); }
+.btn--dark:hover{ box-shadow:0 12px 28px -12px rgba(10,11,13,.5); }
+.btn--sm{ padding:.7rem 1.25rem; }
+.btn--block{ width:100%; }
+/* WhatsApp secundario: legible y reconocible, sin competir con el primario dorado */
+.btn--wa{
+  --btn-bg:rgba(37,211,102,.13); --btn-fg:#86EFB4; --btn-bd:rgba(37,211,102,.45);
+}
+.btn--wa:hover{
+  --btn-bg:rgba(37,211,102,.2); --btn-bd:rgba(37,211,102,.75); --btn-fg:#A7F5C9;
+  box-shadow:none;
+}
+.btn--wa svg{ width:18px; height:18px; }
+
+/* Enlace con subrayado animado */
+.link-u{
+  display:inline-flex; align-items:center; gap:.45rem;
+  font-size:var(--step--1); font-weight:600; letter-spacing:.02em;
+  padding-bottom:2px; background-image:linear-gradient(var(--gold),var(--gold));
+  background-size:0% 1px; background-repeat:no-repeat; background-position:0 100%;
+  transition:background-size .4s var(--ease-out), color .3s var(--ease);
+}
+.link-u:hover{ background-size:100% 1px; color:var(--gold); }
+.link-u svg{ width:14px; height:14px; transition:transform .35s var(--ease-out); }
+.link-u:hover svg{ transform:translateX(3px); }
+
+/* Chips */
+.chip{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.45rem .9rem; border:1px solid var(--ink-line);
+  border-radius:999px; font-size:.76rem; letter-spacing:.02em; color:var(--on-ink-2);
+  backdrop-filter:blur(6px); background:rgba(246,244,240,.03);
+  transition:border-color .35s var(--ease), color .35s var(--ease), transform .35s var(--ease-out);
+}
+.chip:hover{ border-color:var(--gold); color:var(--on-ink); transform:translateY(-2px); }
+.chip .dot{ width:5px; height:5px; border-radius:50%; background:var(--gold); flex:none; }
+
+/* ============ 05. PROGRESO + HEADER ============ */
+.progress{
+  position:fixed; inset:0 auto auto 0; height:2px; width:100%; z-index:120;
+  transform-origin:0 50%; transform:scaleX(0);
+  background:linear-gradient(90deg,var(--gold),var(--gold-soft));
+}
+
+.header{
+  position:fixed; inset:0 0 auto 0; z-index:100;
+  transition:background .45s var(--ease), border-color .45s var(--ease), backdrop-filter .45s var(--ease), padding .45s var(--ease);
+  border-bottom:1px solid transparent;
+  padding-block:1.15rem;
+}
+.header.is-stuck{
+  background:rgba(10,11,13,.82);
+  backdrop-filter:blur(16px) saturate(1.4);
+  border-bottom-color:var(--ink-line);
+  padding-block:.7rem;
+}
+.header__inner{ display:flex; align-items:center; justify-content:space-between; gap:2rem; }
+.header .brand{ color:var(--on-ink); }
+
+.nav{ display:flex; align-items:center; gap:.35rem; }
+.nav a{
+  position:relative; padding:.55rem .85rem; border-radius:999px;
+  font-size:.84rem; font-weight:500; letter-spacing:.01em; color:var(--on-ink-2);
+  transition:color .3s var(--ease), background .3s var(--ease);
+}
+.nav a::after{
+  content:""; position:absolute; left:50%; bottom:.28rem; width:0; height:1px;
+  background:var(--gold); transform:translateX(-50%);
+  transition:width .35s var(--ease-out);
+}
+.nav a:hover{ color:var(--on-ink); }
+.nav a:hover::after{ width:16px; }
+.nav a.is-active{ color:var(--on-ink); }
+.nav a.is-active::after{ width:16px; }
+
+.header__cta{ display:flex; align-items:center; gap:.9rem; }
+.header__phone{
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-size:.82rem; font-weight:500; color:var(--on-ink-2);
+  white-space:nowrap; transition:color .3s var(--ease);
+}
+.header__phone:hover{ color:var(--gold); }
+.header__phone svg{ width:15px; height:15px; }
+
+/* Hamburguesa */
+.burger{
+  display:none; width:44px; height:44px; border:1px solid var(--ink-line);
+  background:transparent; border-radius:50%; cursor:pointer;
+  align-items:center; justify-content:center; flex-direction:column; gap:5px;
+  transition:border-color .3s var(--ease);
+}
+.burger:hover{ border-color:var(--gold); }
+.burger i{
+  display:block; width:16px; height:1.5px; background:var(--on-ink);
+  transition:transform .4s var(--ease-out), opacity .25s var(--ease);
+}
+.burger.is-open i:nth-child(1){ transform:translateY(3.25px) rotate(45deg); }
+.burger.is-open i:nth-child(2){ transform:translateY(-3.25px) rotate(-45deg); }
+
+/* Drawer móvil */
+.drawer{
+  position:fixed; inset:0; z-index:99; background:var(--ink);
+  display:flex; flex-direction:column; justify-content:center;
+  padding:6rem var(--pad-x) 3rem;
+  opacity:0; visibility:hidden; transform:translateY(-8px);
+  transition:opacity .45s var(--ease), transform .55s var(--ease-out), visibility .45s;
+}
+.drawer.is-open{ opacity:1; visibility:visible; transform:none; }
+.drawer nav{ display:flex; flex-direction:column; gap:.25rem; }
+.drawer nav a{
+  font-family:var(--font-display); font-size:clamp(1.9rem,9vw,2.7rem);
+  color:var(--on-ink); padding:.35rem 0; border-bottom:1px solid var(--ink-line);
+  display:flex; align-items:baseline; gap:1rem;
+  opacity:0; transform:translateY(14px);
+  transition:opacity .5s var(--ease) var(--d,0s), transform .6s var(--ease-out) var(--d,0s), color .3s var(--ease);
+}
+.drawer.is-open nav a{ opacity:1; transform:none; }
+.drawer nav a:hover{ color:var(--gold); }
+.drawer nav a small{
+  font-family:var(--font-sans); font-size:.62rem; letter-spacing:.16em;
+  color:var(--on-ink-3); font-weight:600;
+}
+.drawer__foot{
+  margin-top:2.5rem; display:flex; flex-direction:column; gap:1rem;
+  color:var(--on-ink-2); font-size:.86rem;
+}
+.drawer__foot a{ display:inline-flex; align-items:center; gap:.6rem; }
+.drawer__foot a:hover{ color:var(--gold); }
+
+/* ============ 06. HERO ============ */
+.hero{
+  position:relative; background:var(--ink); color:var(--on-ink);
+  padding-top:clamp(9rem,16vh,12rem); padding-bottom:clamp(4rem,8vw,6.5rem);
+  overflow:hidden; isolation:isolate;
+}
+.hero__bg{ position:absolute; inset:0; z-index:-2; pointer-events:none; }
+.hero__grid{
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(to right,var(--ink-line) 1px,transparent 1px),
+    linear-gradient(to bottom,var(--ink-line) 1px,transparent 1px);
+  background-size:88px 88px;
+  mask-image:radial-gradient(120% 90% at 78% 18%,#000 0%,transparent 72%);
+  opacity:.75;
+}
+.hero__glow{
+  position:absolute; width:min(760px,90vw); aspect-ratio:1; border-radius:50%;
+  background:radial-gradient(circle,rgba(192,162,101,.19),transparent 62%);
+  top:-24%; right:-8%; filter:blur(10px);
+}
+.hero__spot{
+  position:absolute; inset:0;
+  background:radial-gradient(420px circle at var(--mx,70%) var(--my,25%),rgba(192,162,101,.10),transparent 68%);
+  transition:opacity .6s var(--ease); opacity:0;
+}
+.hero:hover .hero__spot{ opacity:1; }
+.hero__noise{
+  position:absolute; inset:0; background-image:var(--noise);
+  opacity:.04; mix-blend-mode:screen;
+}
+/* Construcción geométrica (eco del logotipo) */
+.hero__geo{
+  position:absolute; right:-6%; top:8%; width:min(640px,58vw); opacity:.5;
+  z-index:-1; pointer-events:none;
+}
+.hero__geo .g-line{ stroke:var(--ink-line-2); stroke-width:.5; fill:none; }
+.hero__geo .g-gold{ stroke:rgba(192,162,101,.5); stroke-width:.7; fill:none; }
+.hero__geo .g-draw{
+  stroke-dasharray:var(--len,600); stroke-dashoffset:var(--len,600);
+  animation:draw 2.6s var(--ease-out) forwards .3s;
+}
+@keyframes draw{ to{ stroke-dashoffset:0; } }
+
+.hero__inner{
+  position:relative; display:grid; gap:clamp(2.5rem,5vw,4rem);
+  grid-template-columns:1.35fr .65fr;
+}
+.hero__title{
+  font-family:var(--font-display); font-size:var(--step-5);
+  line-height:.98; letter-spacing:-.028em; max-width:17ch;
+  margin-top:1.6rem;
+}
+.hero__title em{ font-style:italic; color:var(--gold-soft); }
+.hero__sub{
+  margin-top:1.8rem; max-width:56ch; font-size:var(--step-1);
+  line-height:1.6; color:var(--on-ink-2);
+}
+.hero__actions{ display:flex; flex-wrap:wrap; gap:.85rem; margin-top:2.4rem; }
+.hero__chips{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:2.6rem; }
+
+.hero__aside{
+  border:1px solid var(--ink-line); border-radius:var(--r-lg);
+  background:linear-gradient(160deg,rgba(246,244,240,.055),rgba(246,244,240,.012));
+  backdrop-filter:blur(12px); padding:clamp(1.5rem,3vw,2rem);
+  display:grid; gap:1.4rem; align-content:start;
+  max-width:420px;
+}
+.hero__aside h2{ font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--on-ink-3); font-weight:600; font-family:var(--font-sans); }
+.mini-list{ display:grid; gap:.1rem; }
+.mini-list li{ border-top:1px solid var(--ink-line); }
+.mini-list li:first-child{ border-top:0; }
+.mini-list a{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:.95rem .25rem; font-size:.92rem; color:var(--on-ink-2);
+  transition:color .3s var(--ease), padding .35s var(--ease-out);
+}
+.mini-list a:hover{ color:var(--on-ink); padding-left:.7rem; }
+.mini-list a b{ font-weight:500; }
+.mini-list a svg{ width:14px; height:14px; color:var(--gold); opacity:0; transform:translateX(-6px); transition:all .35s var(--ease-out); }
+.mini-list a:hover svg{ opacity:1; transform:none; }
+
+.hero__card-note{
+  display:flex; gap:.85rem; align-items:flex-start;
+  padding-top:1.2rem; border-top:1px solid var(--ink-line);
+  font-size:.82rem; color:var(--on-ink-3); line-height:1.55;
+}
+.hero__card-note svg{ width:17px; height:17px; flex:none; color:var(--gold); margin-top:.1rem; }
+
+/* ============ 07. MÉTRICAS ============ */
+.metrics{ background:var(--ink-2); border-block:1px solid var(--ink-line); color:var(--on-ink); }
+.metrics__grid{
+  display:grid; grid-template-columns:repeat(4,1fr);
+}
+.metric{
+  padding:clamp(2rem,4vw,2.9rem) clamp(1rem,2.5vw,2rem);
+  border-left:1px solid var(--ink-line);
+  transition:background .45s var(--ease);
+}
+.metric:first-child{ border-left:0; }
+.metric:hover{ background:rgba(246,244,240,.025); }
+.metric__num{
+  font-family:var(--font-display); font-size:clamp(2.1rem,4.5vw,3.1rem);
+  line-height:1; color:var(--on-ink); display:flex; align-items:baseline; gap:.06em;
+}
+.metric__num .suf{ color:var(--gold); font-size:.55em; }
+.metric__label{
+  margin-top:.85rem; font-size:.875rem; line-height:1.5;
+  color:rgba(246,244,240,.78); letter-spacing:-.002em; max-width:24ch;
+}
+
+/* ============ 08. TICKER ============ */
+.ticker{
+  background:var(--gold); color:var(--ink); overflow:hidden;
+  padding-block:.9rem; border-block:1px solid rgba(10,11,13,.12);
+}
+.ticker__track{ display:flex; width:max-content; animation:slide 42s linear infinite; }
+.ticker:hover .ticker__track{ animation-play-state:paused; }
+.ticker__group{ display:flex; align-items:center; flex:none; }
+.ticker span{
+  display:inline-flex; align-items:center; gap:1.6rem; padding-inline:1.6rem;
+  font-size:.76rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; white-space:nowrap;
+}
+.ticker span::after{ content:""; width:4px; height:4px; border-radius:50%; background:rgba(10,11,13,.45); }
+@keyframes slide{ to{ transform:translateX(-50%); } }
+
+/* ============ 09. SERVICIOS ============ */
+.services__top{
+  display:grid; grid-template-columns:1.1fr .9fr; align-items:end;
+  gap:clamp(1.5rem,4vw,3.5rem);
+  margin-bottom:clamp(2.5rem,5vw,4rem);
+}
+.services__top .lead{ max-width:42ch; padding-bottom:.3rem; }
+@media (max-width:860px){
+  .services__top{ grid-template-columns:1fr; align-items:start; }
+}
+.cards{
+  display:grid; grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--paper-3); border-left:1px solid var(--paper-3);
+}
+.card{
+  position:relative; padding:clamp(1.8rem,3vw,2.6rem);
+  border-right:1px solid var(--paper-3); border-bottom:1px solid var(--paper-3);
+  background:var(--paper); overflow:hidden;
+  transition:background .5s var(--ease), transform .5s var(--ease-out);
+  display:flex; flex-direction:column; gap:1rem; min-height:clamp(280px,32vw,340px);
+}
+.card::before{
+  content:""; position:absolute; inset:auto 0 0 0; height:2px; background:var(--gold);
+  transform:scaleX(0); transform-origin:0 50%;
+  transition:transform .55s var(--ease-out);
+}
+.card:hover{ background:var(--paper-2); }
+.card:hover::before{ transform:scaleX(1); }
+.card__num{
+  font-family:var(--font-display); font-size:.95rem; color:var(--text-3);
+  letter-spacing:.06em; transition:color .4s var(--ease);
+}
+.card:hover .card__num{ color:var(--gold); }
+.card__icon{
+  width:44px; height:44px; color:var(--text); margin-bottom:.3rem;
+  transition:transform .55s var(--ease-out), color .4s var(--ease);
+}
+.card:hover .card__icon{ transform:translateY(-3px) scale(1.04); color:var(--gold); }
+.card__icon svg{ width:100%; height:100%; }
+.card h3{ font-size:var(--step-2); font-family:var(--font-display); }
+.card p{ color:var(--text-2); font-size:.94rem; line-height:1.62; }
+.card__tags{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:auto; padding-top:1.1rem; }
+.card__tags i{
+  font-style:normal; font-size:.7rem; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--text-3); border:1px solid var(--paper-3); border-radius:999px; padding:.28rem .6rem;
+  transition:border-color .35s var(--ease), color .35s var(--ease);
+}
+.card:hover .card__tags i{ border-color:var(--text-3); color:var(--text-2); }
+
+.card--cta{
+  background:var(--ink); color:var(--on-ink); justify-content:space-between;
+}
+.card--cta::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(360px circle at 80% 10%,rgba(192,162,101,.18),transparent 70%);
+}
+.card--cta:hover{ background:var(--ink-3); }
+.card--cta h3{ position:relative; z-index:1; }
+.card--cta p{ color:var(--on-ink-2); position:relative; z-index:1; }
+.card--cta .btn{ position:relative; z-index:1; align-self:flex-start; }
+
+/* ============ 10. SOCIEDADES ============ */
+.soc__layout{
+  display:grid; grid-template-columns:1fr 1fr; gap:clamp(2.5rem,5vw,4.5rem);
+  align-items:start;
+}
+.checklist{ display:grid; gap:.05rem; margin-top:2rem; }
+.checklist li{
+  display:flex; gap:1rem; align-items:flex-start; padding:.95rem 0;
+  border-bottom:1px solid var(--ink-line); font-size:.95rem; color:var(--on-ink-2);
+  transition:color .35s var(--ease), transform .4s var(--ease-out);
+}
+.checklist li:hover{ color:var(--on-ink); transform:translateX(4px); }
+.checklist svg{ width:18px; height:18px; flex:none; color:var(--gold); margin-top:.18rem; }
+
+.table-wrap{
+  overflow-x:auto; border:1px solid var(--ink-line); border-radius:var(--r-md);
+  background:rgba(246,244,240,.02);
+  -webkit-overflow-scrolling:touch;
+}
+.table-wrap table{ min-width:560px; font-size:.88rem; }
+.table-wrap caption{
+  text-align:left; padding:1.15rem 1.25rem; font-size:.72rem; letter-spacing:.15em;
+  text-transform:uppercase; color:var(--on-ink-3); font-weight:600;
+  border-bottom:1px solid var(--ink-line);
+}
+.table-wrap th,.table-wrap td{
+  text-align:left; padding:.95rem 1.25rem; border-bottom:1px solid var(--ink-line);
+  vertical-align:top;
+}
+.table-wrap thead th{
+  font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--on-ink); font-weight:600; background:rgba(246,244,240,.035);
+}
+.table-wrap tbody th{ font-weight:500; color:var(--on-ink-2); width:30%; }
+.table-wrap tbody td{ color:var(--on-ink-2); }
+.table-wrap tbody tr{ transition:background .3s var(--ease); }
+.table-wrap tbody tr:hover{ background:rgba(192,162,101,.055); }
+.table-wrap tbody tr:hover td,.table-wrap tbody tr:hover th{ color:var(--on-ink); }
+.table-wrap tbody tr:last-child th,.table-wrap tbody tr:last-child td{ border-bottom:0; }
+.table-note{ margin-top:1rem; font-size:.78rem; color:var(--on-ink-3); line-height:1.6; }
+
+/* ============ 11. PROCESO ============ */
+.steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:clamp(2rem,3.5vw,2.8rem); }
+.step{
+  position:relative; padding:0 clamp(1.1rem,2vw,1.8rem) 0 0;
+}
+.step__bar{ position:relative; height:1px; background:var(--paper-3); margin-bottom:1.6rem; }
+.step__bar::before{
+  content:""; position:absolute; left:0; top:0; height:1px; width:0; background:var(--gold);
+  transition:width .9s var(--ease-out);
+}
+.step.is-in .step__bar::before{ width:100%; }
+.step__dot{
+  position:absolute; left:0; top:-3.5px; width:8px; height:8px; border-radius:50%;
+  background:var(--paper); border:1px solid var(--paper-3);
+  transition:background .5s var(--ease) .3s, border-color .5s var(--ease) .3s, transform .5s var(--ease-out) .3s;
+}
+.step.is-in .step__dot{ background:var(--gold); border-color:var(--gold); transform:scale(1.15); }
+.step__n{
+  font-size:.7rem; font-weight:700; letter-spacing:.18em; color:var(--gold);
+}
+.step h3{ font-family:var(--font-display); font-size:var(--step-2); margin-top:.9rem; }
+.step p{ margin-top:.85rem; color:var(--text-2); font-size:.92rem; line-height:1.62; }
+
+/* ============ 12. SECTORES / RUBROS ============ */
+.rubros__layout{
+  display:grid; grid-template-columns:.78fr 1.22fr; gap:clamp(2.5rem,5vw,4.5rem);
+  align-items:start;
+}
+.rubros__aside p{ margin-top:1.2rem; color:var(--text-2); font-size:.95rem; line-height:1.65; max-width:34ch; }
+.rubros__aside .link-u{ margin-top:1.6rem; }
+
+/* Matriz de rubros con filetes finos */
+.rubros{
+  display:grid; grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--paper-3); border-left:1px solid var(--paper-3);
+  background:var(--paper);
+}
+.rubro{
+  position:relative; display:flex; align-items:center; gap:.85rem;
+  padding:1.35rem 1.25rem;
+  border-right:1px solid var(--paper-3); border-bottom:1px solid var(--paper-3);
+  font-size:.92rem; color:var(--text-2); overflow:hidden;
+  transition:color .35s var(--ease), background .45s var(--ease);
+}
+.rubro::before{
+  content:""; position:absolute; inset:auto 0 0 0; height:2px; background:var(--gold);
+  transform:scaleX(0); transform-origin:0 50%; transition:transform .5s var(--ease-out);
+}
+.rubro:hover{ color:var(--text); background:var(--paper-2); }
+.rubro:hover::before{ transform:scaleX(1); }
+.rubro__ic{
+  width:34px; height:34px; flex:none; border-radius:50%;
+  border:1px solid var(--paper-3); display:grid; place-items:center;
+  transition:border-color .4s var(--ease), background .4s var(--ease), transform .5s var(--ease-out);
+}
+.rubro__ic svg{ width:16px; height:16px; color:var(--gold); transition:color .4s var(--ease); }
+.rubro:hover .rubro__ic{ border-color:var(--gold); background:var(--gold); transform:scale(1.06); }
+.rubro:hover .rubro__ic svg{ color:var(--ink); }
+
+/* ============ 13. NOSOTROS ============ */
+.about{
+  display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(2.5rem,6vw,5rem); align-items:center;
+}
+.about__visual{
+  position:relative; aspect-ratio:4/5; border:1px solid var(--ink-line); border-radius:var(--r-lg);
+  background:linear-gradient(155deg,var(--ink-3),var(--ink)); overflow:hidden;
+  display:grid; place-items:center;
+}
+.about__visual svg{ width:64%; opacity:.9; }
+.about__visual::after{
+  content:""; position:absolute; inset:0;
+  background:radial-gradient(70% 50% at 50% 110%,rgba(192,162,101,.22),transparent 70%);
+}
+.about__badge{
+  position:absolute; left:0; bottom:0; z-index:2; margin:1.25rem;
+  padding:.75rem 1.1rem; background:var(--paper); color:var(--text);
+  border-radius:999px; font-size:.72rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+}
+.values{ display:grid; grid-template-columns:1fr 1fr; gap:.05rem; margin-top:2.6rem; }
+.value{ padding:1.5rem 1.5rem 1.5rem 0; border-top:1px solid var(--ink-line); }
+.value h3{ font-size:1.02rem; font-family:var(--font-sans); font-weight:600; letter-spacing:-.01em; }
+.value p{ margin-top:.55rem; font-size:.88rem; color:var(--on-ink-3); line-height:1.6; }
+
+/* ============ 14. FAQ ============ */
+.faq{ display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(2.5rem,5vw,4.5rem); align-items:start; }
+.faq__list{ border-top:1px solid var(--paper-3); }
+.faq details{ border-bottom:1px solid var(--paper-3); }
+.faq summary{
+  display:flex; align-items:flex-start; justify-content:space-between; gap:1.5rem;
+  padding:1.5rem 0; cursor:pointer; list-style:none;
+  font-family:var(--font-display); font-weight:400;
+  font-size:clamp(1.18rem,1.05rem + .5vw,1.5rem);
+  letter-spacing:-.015em; line-height:1.24;
+  transition:color .3s var(--ease);
+}
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary:hover{ color:var(--gold); }
+.faq summary .ic{
+  position:relative; flex:none; width:22px; height:22px; margin-top:.35rem;
+  border:1px solid var(--paper-3); border-radius:50%;
+  transition:border-color .35s var(--ease), transform .45s var(--ease-out), background .35s var(--ease);
+}
+.faq summary .ic::before,.faq summary .ic::after{
+  content:""; position:absolute; left:50%; top:50%; background:var(--text);
+  transform:translate(-50%,-50%); transition:opacity .3s var(--ease), background .3s var(--ease);
+}
+.faq summary .ic::before{ width:9px; height:1.5px; }
+.faq summary .ic::after{ width:1.5px; height:9px; }
+.faq summary:hover .ic{ border-color:var(--gold); }
+.faq details[open] summary{ color:var(--gold); }
+.faq details[open] summary .ic{ background:var(--gold); border-color:var(--gold); transform:rotate(90deg); }
+.faq details[open] summary .ic::after{ opacity:0; }
+.faq details[open] summary .ic::before{ background:var(--ink); }
+.faq__answer{ overflow:hidden; }
+.faq__answer p{ padding:0 3rem 1.6rem 0; color:var(--text-2); font-size:.95rem; line-height:1.7; max-width:62ch; }
+.faq__answer p + p{ padding-top:.9rem; }
+.faq__answer strong{ color:var(--text); font-weight:600; }
+.faq details[open] .faq__answer{ animation:reveal .5s var(--ease-out); }
+@keyframes reveal{ from{ opacity:0; transform:translateY(-6px); } to{ opacity:1; transform:none; } }
+
+.faq__aside{
+  border:1px solid var(--paper-3); border-radius:var(--r-lg); padding:clamp(1.6rem,3vw,2.2rem);
+  background:var(--paper); position:sticky; top:6.5rem;
+}
+.faq__aside h3{ font-family:var(--font-display); font-size:var(--step-2); }
+.faq__aside p{ margin-top:.9rem; color:var(--text-2); font-size:.92rem; line-height:1.65; }
+.faq__aside .btn{ margin-top:1.5rem; }
+
+/* ============ 15. CONTACTO ============ */
+.contact{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(2.5rem,5vw,4.5rem); align-items:start; }
+.form{ display:grid; gap:1.1rem; margin-top:2.4rem; }
+.field{ position:relative; display:grid; gap:.5rem; }
+.field label{
+  font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--on-ink-3);
+}
+.field label i,.consent i{ font-style:normal; color:var(--gold); }
+.field__head{ display:flex; align-items:baseline; justify-content:space-between; gap:1rem; }
+.counter{
+  font-size:.7rem; letter-spacing:.06em; font-weight:600; font-variant-numeric:tabular-nums;
+  color:var(--on-ink-3); transition:color .3s var(--ease);
+}
+.counter.is-ok{ color:var(--gold); }
+.field input,.field select,.field textarea{
+  width:100%; background:rgba(246,244,240,.035); color:var(--on-ink);
+  border:1px solid var(--ink-line); border-radius:var(--r-sm);
+  padding:.9rem 1rem; font-size:.94rem;
+  transition:border-color .3s var(--ease), background .3s var(--ease), box-shadow .3s var(--ease);
+  appearance:none;
+}
+.field textarea{ min-height:118px; resize:vertical; }
+.field select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C0A265' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 1rem center; background-size:15px;
+  padding-right:2.6rem;
+}
+.field select option{ background:var(--ink-2); color:var(--on-ink); }
+.field input::placeholder,.field textarea::placeholder{ color:var(--on-ink-3); }
+.field input:hover,.field select:hover,.field textarea:hover{ border-color:var(--ink-line-2); }
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none; border-color:var(--gold);
+  background:rgba(246,244,240,.055);
+  box-shadow:0 0 0 3px var(--gold-dim);
+}
+.field.has-error input,.field.has-error select,.field.has-error textarea{ border-color:#E0736A; }
+.field .err{
+  font-size:.74rem; color:#E9938C; opacity:0; height:0; transition:opacity .25s var(--ease);
+}
+.field.has-error .err{ opacity:1; height:auto; }
+.form__row{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+
+.consent{
+  display:flex; gap:.8rem; align-items:flex-start; font-size:.8rem;
+  color:var(--on-ink-3); line-height:1.55; cursor:pointer;
+}
+.consent input{
+  appearance:none; width:18px; height:18px; flex:none; margin-top:.1rem;
+  border:1px solid var(--ink-line-2); border-radius:4px; background:transparent; cursor:pointer;
+  transition:all .3s var(--ease); position:relative;
+}
+.consent input:checked{ background:var(--gold); border-color:var(--gold); }
+.consent input:checked::after{
+  content:""; position:absolute; left:5px; top:2px; width:5px; height:9px;
+  border:solid var(--ink); border-width:0 1.7px 1.7px 0; transform:rotate(45deg);
+}
+.consent a{ color:var(--on-ink-2); text-decoration:underline; text-underline-offset:2px; }
+
+.form__submit{
+  display:flex; align-items:center; gap:1.1rem; flex-wrap:wrap; margin-top:.4rem;
+}
+.form__submit .btn svg{ width:17px; height:17px; }
+.form__submit-note{ font-size:.78rem; color:var(--on-ink-3); letter-spacing:.01em; }
+
+.form__status{
+  font-size:.86rem; padding:.9rem 1.1rem; border-radius:var(--r-sm);
+  border:1px solid var(--gold); background:var(--gold-dim); color:var(--gold-soft);
+  display:none;
+}
+.form__status.is-visible{ display:block; animation:reveal .45s var(--ease-out); }
+.form__status--error{ border-color:#E0736A; background:rgba(224,115,106,.12); color:#F0A9A3; }
+.form__status--ok{ border-color:#4FBE7F; background:rgba(79,190,127,.12); color:#9BE3B8; }
+.btn:disabled{ opacity:.6; cursor:progress; transform:none; }
+
+.info-row{
+  display:flex; gap:1.1rem; align-items:flex-start; padding:1.25rem 0;
+  border-top:1px solid var(--ink-line);
+}
+.info-row svg{ width:19px; height:19px; flex:none; color:var(--gold); margin-top:.22rem; }
+.info-row h3{
+  font-family:var(--font-sans); font-size:.7rem; letter-spacing:.14em;
+  text-transform:uppercase; font-weight:600; color:var(--on-ink-3);
+}
+.info-row p,.info-row a{ display:block; margin-top:.35rem; font-size:.95rem; color:var(--on-ink); }
+.info-row a{ transition:color .3s var(--ease); }
+.info-row a:hover{ color:var(--gold); }
+.info-row small{ display:block; margin-top:.25rem; font-size:.8rem; color:var(--on-ink-3); }
+
+/* -- Ubicación -- */
+.loc{
+  display:grid; grid-template-columns:.9fr 1.1fr;
+  gap:clamp(2rem,4vw,3.5rem); align-items:start;
+}
+.loc__actions{ display:flex; flex-wrap:wrap; gap:.75rem; margin-top:2rem; }
+
+/* Tres datos en una sola fila, debajo del mapa */
+.loc__cards{
+  display:grid; grid-template-columns:repeat(3,1fr);
+  margin-top:clamp(2.5rem,5vw,3.5rem);
+  border-top:1px solid var(--paper-3);
+}
+.loc__card{
+  display:flex; gap:1rem; align-items:flex-start;
+  padding:1.6rem clamp(1.2rem,2.5vw,2rem) 0 0;
+  border-left:1px solid var(--paper-3);
+}
+.loc__card:first-child{ border-left:0; padding-left:0; }
+.loc__card:not(:first-child){ padding-left:clamp(1.2rem,2.5vw,2rem); }
+.loc__card svg{ width:19px; height:19px; flex:none; color:var(--gold); margin-top:.2rem; }
+.loc__card h3{
+  font-family:var(--font-sans); font-size:.7rem; letter-spacing:.14em;
+  text-transform:uppercase; font-weight:600; color:var(--text-3);
+}
+.loc__card p,.loc__card a{ display:block; margin-top:.4rem; font-size:.95rem; color:var(--text); }
+.loc__card a{ transition:color .3s var(--ease); }
+.loc__card a:hover{ color:var(--gold); }
+.loc__card small{ display:block; margin-top:.3rem; font-size:.8rem; color:var(--text-3); line-height:1.55; }
+
+.map{
+  border:1px solid var(--ink-line); border-radius:var(--r-md);
+  overflow:hidden; height:280px; position:relative; background:var(--ink-3);
+}
+.map iframe{ width:100%; height:100%; border:0; filter:grayscale(1) invert(.92) contrast(.86); }
+.map__ph{
+  position:absolute; inset:0; display:grid; place-items:center;
+  font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; color:var(--on-ink-3);
+}
+/* Mapa sobre fondo claro */
+.map--light{
+  border-color:var(--paper-3); background:var(--paper-2);
+  height:clamp(280px,26vw,360px);
+  box-shadow:0 24px 50px -32px rgba(10,11,13,.45);
+}
+.map--light iframe{ filter:grayscale(1) contrast(1.04); }
+.map--light .map__ph{ color:var(--text-3); }
+
+/* -- Tarjeta de WhatsApp -- */
+.wa-card{
+  border:1px solid var(--ink-line); border-radius:var(--r-lg);
+  background:linear-gradient(160deg,rgba(246,244,240,.055),rgba(246,244,240,.012));
+  backdrop-filter:blur(12px);
+  padding:clamp(1.6rem,3vw,2.2rem); display:grid; gap:1.15rem; align-content:start;
+}
+.wa-card--note{ background:rgba(246,244,240,.025); padding:1.25rem clamp(1.4rem,2.5vw,1.8rem); }
+.wa-card h3{ font-family:var(--font-display); font-size:var(--step-2); }
+.wa-card p{ color:var(--on-ink-2); font-size:.93rem; line-height:1.65; }
+.wa-card .btn{ width:100%; }
+.wa-card__split{
+  display:grid; gap:.7rem; padding-top:1.15rem; border-top:1px solid var(--ink-line);
+}
+.wa-card__note{
+  display:flex; gap:.7rem; align-items:flex-start;
+  font-size:.8rem; color:var(--on-ink-3); line-height:1.55;
+}
+.wa-card__note svg{ width:16px; height:16px; flex:none; color:var(--gold); margin-top:.12rem; }
+.contact__aside{ display:grid; gap:1.5rem; }
+
+/* ============ 16. FOOTER + BARRA MÓVIL ============ */
+.footer{ background:var(--ink); color:var(--on-ink); border-top:1px solid var(--ink-line); }
+.footer__top{
+  display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:2.5rem;
+  padding-block:clamp(3rem,6vw,4.5rem);
+}
+.footer__brand p{ margin-top:1.4rem; max-width:34ch; color:var(--on-ink-3); font-size:.88rem; line-height:1.65; }
+.footer__actions{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.6rem; }
+.footer h3{
+  font-family:var(--font-sans); font-size:.7rem; letter-spacing:.15em; text-transform:uppercase;
+  font-weight:600; color:var(--on-ink-3); margin-bottom:1.2rem;
+}
+.footer ul{ display:grid; gap:.7rem; }
+.footer ul a{ font-size:.89rem; color:var(--on-ink-2); transition:color .3s var(--ease), padding-left .3s var(--ease-out); }
+.footer ul a:hover{ color:var(--gold); padding-left:.3rem; }
+.footer__bottom{
+  border-top:1px solid var(--ink-line); padding-block:1.6rem;
+  display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;
+  font-size:.78rem; color:var(--on-ink-3);
+}
+.footer__bottom a:hover{ color:var(--gold); }
+/* Botón flotante de WhatsApp */
+.wa-float{
+  position:fixed; left:clamp(1rem,3vw,2rem); bottom:clamp(1rem,3vw,2rem); z-index:90;
+  display:inline-flex; align-items:center; gap:.65rem;
+  padding:.8rem 1.15rem; border-radius:999px;
+  background:#1FBE5C; color:#04240F; border:1px solid rgba(10,11,13,.16);
+  font-size:.85rem; font-weight:600; letter-spacing:.01em; white-space:nowrap;
+  box-shadow:0 14px 34px -14px rgba(37,211,102,.75);
+  opacity:0; visibility:hidden; transform:translateY(12px);
+  transition:opacity .45s var(--ease), transform .5s var(--ease-out), visibility .45s, box-shadow .35s var(--ease);
+}
+.wa-float.is-visible{ opacity:1; visibility:visible; transform:none; }
+.wa-float:hover{ transform:translateY(-2px); box-shadow:0 18px 40px -14px rgba(37,211,102,.9); }
+.wa-float svg{ width:20px; height:20px; flex:none; }
+.wa-float span{ display:inline; }
+@media (max-width:860px){
+  .wa-float{ bottom:5.2rem; padding:.75rem; }
+  .wa-float span{ display:none; }
+}
+
+.mobile-bar{
+  position:fixed; inset:auto 0 0 0; z-index:95; display:none;
+  background:rgba(10,11,13,.92); backdrop-filter:blur(14px);
+  border-top:1px solid var(--ink-line);
+  padding:.7rem var(--pad-x) calc(.7rem + env(safe-area-inset-bottom));
+  gap:.6rem;
+  transform:translateY(110%); transition:transform .5s var(--ease-out);
+}
+.mobile-bar.is-visible{ transform:none; }
+.mobile-bar .btn{ flex:1; padding-block:.85rem; }
+
+.to-top{
+  position:fixed; right:clamp(1rem,3vw,2rem); bottom:clamp(1rem,3vw,2rem); z-index:90;
+  width:46px; height:46px; border-radius:50%; border:1px solid var(--ink-line-2);
+  background:rgba(10,11,13,.85); color:var(--on-ink); backdrop-filter:blur(10px);
+  display:grid; place-items:center; cursor:pointer;
+  opacity:0; visibility:hidden; transform:translateY(10px);
+  transition:all .4s var(--ease-out);
+}
+.to-top.is-visible{ opacity:1; visibility:visible; transform:none; }
+.to-top:hover{ border-color:var(--gold); color:var(--gold); }
+.to-top svg{ width:17px; height:17px; }
+
+/* ============ 17. ANIMACIONES DE APARICIÓN ============ */
+[data-reveal]{
+  opacity:0; transform:translateY(22px);
+  transition:opacity .8s var(--ease-out) var(--d,0s), transform .9s var(--ease-out) var(--d,0s);
+}
+[data-reveal].is-in{ opacity:1; transform:none; }
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  html{ scroll-behavior:auto; }
+  [data-reveal]{ opacity:1; transform:none; }
+}
+
+/* ============ 18. RESPONSIVE ============ */
+@media (max-width:1080px){
+  .hero__inner{ grid-template-columns:1fr; }
+  .hero__aside{ max-width:none; }
+  .cards{ grid-template-columns:repeat(2,1fr); }
+  .steps{ grid-template-columns:repeat(2,1fr); row-gap:1.5rem; }
+  .soc__layout,.about,.faq,.contact,.loc,.rubros__layout{ grid-template-columns:1fr; }
+  .rubros{ grid-template-columns:repeat(2,1fr); }
+  .loc__cards{ grid-template-columns:1fr 1fr; }
+  .loc__card:nth-child(3){ border-left:0; padding-left:0; border-top:1px solid var(--paper-3); margin-top:1.6rem; }
+  .about__visual{ max-width:380px; aspect-ratio:1/1; }
+  .faq__aside{ position:static; }
+  .footer__top{ grid-template-columns:1fr 1fr; }
+  .hero__geo{ opacity:.28; right:-22%; }
+}
+@media (max-width:860px){
+  .nav,.header__phone{ display:none; }
+  .burger{ display:flex; }
+  .metrics__grid{ grid-template-columns:repeat(2,1fr); }
+  .metric:nth-child(3){ border-left:0; }
+  .metric:nth-child(n+3){ border-top:1px solid var(--ink-line); }
+  .mobile-bar{ display:flex; }
+  .to-top{ bottom:5.2rem; }
+  .footer__bottom{ padding-bottom:4.5rem; }
+}
+@media (max-width:640px){
+  .cards{ grid-template-columns:1fr; }
+  .steps{ grid-template-columns:1fr; }
+  .step{ padding-right:0; }
+  .values{ grid-template-columns:1fr; }
+  .form__row{ grid-template-columns:1fr; }
+  .footer__top{ grid-template-columns:1fr; gap:2rem; }
+  .metrics__grid{ grid-template-columns:1fr; }
+  .metric{ border-left:0; border-top:1px solid var(--ink-line); }
+  .metric:first-child{ border-top:0; }
+  .faq__answer p{ padding-right:0; }
+  .rubros{ grid-template-columns:1fr; }
+  .loc__cards{ grid-template-columns:1fr; }
+  .loc__card{ border-left:0; padding-left:0; }
+  .loc__card:not(:first-child){
+    border-top:1px solid var(--paper-3); margin-top:1.5rem; padding-left:0;
+  }
+  .hero__title{ max-width:none; }
+}
+</style>
+
+<!-- =========================================================
+     DATOS ESTRUCTURADOS — AEO / GEO / AIO
+     Ayudan a Google, Bing y a los motores generativos (ChatGPT,
+     Perplexity, Gemini, AI Overviews) a entender la entidad,
+     los servicios y las respuestas del sitio.
+     ========================================================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":["AccountingService","ProfessionalService","LocalBusiness"],
+      "@id":"https://www.estudiovyasociados.com.ar/#estudio",
+      "name":"Estudio Contable Vélez & Asociados",
+      "alternateName":"Vélez & Asociados — Consultora PyME",
+      "description":"Estudio contable y consultora PyME en Córdoba capital. Liquidación de sueldos, liquidaciones impositivas municipales, provinciales y nacionales, confección de balances, seguimiento de cuentas, constitución de SAS, SRL y SA, y consultoría legal e impositiva.",
+      "url":"https://www.estudiovyasociados.com.ar/",
+      "telephone":"+54-351-000-0000",
+      "priceRange":"$$",
+      "currenciesAccepted":"ARS",
+      "image":"https://www.estudiovyasociados.com.ar/og-velez-asociados.jpg",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Ayacucho 395, Piso 7, Oficina C",
+        "addressLocality":"Córdoba",
+        "addressRegion":"Córdoba",
+        "postalCode":"X5000",
+        "addressCountry":"AR"
+      },
+      "geo":{ "@type":"GeoCoordinates","latitude":-31.4184,"longitude":-64.1873 },
+      "hasMap":"https://maps.app.goo.gl/wVXTVe7ze9c1tKPV9",
+      "openingHoursSpecification":[{
+        "@type":"OpeningHoursSpecification",
+        "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens":"09:00","closes":"18:00"
+      }],
+      "areaServed":[
+        {"@type":"City","name":"Córdoba"},
+        {"@type":"State","name":"Provincia de Córdoba"},
+        {"@type":"Country","name":"Argentina"}
+      ],
+      "knowsLanguage":"es-AR",
+      "knowsAbout":["Liquidación de sueldos","Impuesto a las Ganancias","IVA","Ingresos Brutos","Convenio Multilateral","Monotributo","Estados contables","Constitución de SAS","Sociedad de Responsabilidad Limitada","Sociedad Anónima","Planificación fiscal"],
+      "hasOfferCatalog":{
+        "@type":"OfferCatalog",
+        "name":"Servicios profesionales",
+        "itemListElement":[
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Liquidación de sueldos y cargas sociales","description":"Recibos, Libro de Sueldos Digital, altas y bajas, F.931, convenios colectivos y liquidaciones finales."}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Liquidaciones impositivas municipales, provinciales y nacionales","description":"Presentaciones mensuales y anuales: IVA, Ganancias, Bienes Personales, Ingresos Brutos, Convenio Multilateral, Comercio e Industria y Monotributo."}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Constitución de sociedades SAS, SRL y SA","description":"Estatuto, inscripción en la Inspección de Personas Jurídicas de Córdoba, CUIT, libros digitales e inscripción impositiva."}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Confección de balances y seguimiento de cuentas","description":"Estados contables, conciliaciones bancarias, cuentas corrientes e informes de gestión."}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Consultoría legal e impositiva","description":"Planificación fiscal, contratos, materia societaria y laboral, y atención de intimaciones y fiscalizaciones."}}
+        ]
+      }
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://www.estudiovyasociados.com.ar/#website",
+      "url":"https://www.estudiovyasociados.com.ar/",
+      "name":"Estudio Contable Vélez & Asociados",
+      "inLanguage":"es-AR",
+      "publisher":{"@id":"https://www.estudiovyasociados.com.ar/#estudio"}
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://www.estudiovyasociados.com.ar/#webpage",
+      "url":"https://www.estudiovyasociados.com.ar/",
+      "name":"Estudio Contable Vélez & Asociados | Contador para PyMEs en Córdoba",
+      "isPartOf":{"@id":"https://www.estudiovyasociados.com.ar/#website"},
+      "about":{"@id":"https://www.estudiovyasociados.com.ar/#estudio"},
+      "inLanguage":"es-AR"
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.estudiovyasociados.com.ar/"},
+        {"@type":"ListItem","position":2,"name":"Servicios","item":"https://www.estudiovyasociados.com.ar/#servicios"},
+        {"@type":"ListItem","position":3,"name":"Sociedades","item":"https://www.estudiovyasociados.com.ar/#sociedades"},
+        {"@type":"ListItem","position":4,"name":"Contacto","item":"https://www.estudiovyasociados.com.ar/#contacto"}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://www.estudiovyasociados.com.ar/#faq",
+      "mainEntity":[
+        {"@type":"Question","name":"¿Cuánto cuesta un estudio contable para una PyME en Córdoba?",
+         "acceptedAnswer":{"@type":"Answer","text":"El honorario se define según la cantidad de empleados, el volumen de facturación, la condición impositiva y los impuestos que corresponda liquidar. En la primera reunión relevamos la situación de la empresa y entregamos una propuesta cerrada por escrito, con alcance y calendario de vencimientos."}},
+        {"@type":"Question","name":"¿Cuánto tarda constituir una SAS en Córdoba y qué documentación necesito?",
+         "acceptedAnswer":{"@type":"Answer","text":"El trámite habitual de constitución de una SAS en Córdoba se completa en aproximadamente 15 a 20 días hábiles desde la firma del instrumento constitutivo. Se necesita DNI y CUIT de los socios, domicilio legal, definición del objeto y del capital social, y designación del administrador titular y suplente. Nos ocupamos del estatuto, la inscripción en la Inspección de Personas Jurídicas, el CUIT, los libros digitales y las inscripciones impositivas."}},
+        {"@type":"Question","name":"¿Qué conviene: SAS, SRL o SA?",
+         "acceptedAnswer":{"@type":"Answer","text":"La SAS conviene cuando se busca constitución rápida, estructura flexible y gestión digital, típico de proyectos nuevos y equipos chicos. La SRL es la elección habitual de empresas familiares y sociedades de dos o más socios que priorizan un marco consolidado con cesión de cuotas. La SA se adapta a estructuras de mayor escala, con capital dividido en acciones y directorio. En la consulta inicial comparamos las tres opciones aplicadas a tu proyecto."}},
+        {"@type":"Question","name":"¿Cómo es el traspaso desde mi contador actual?",
+         "acceptedAnswer":{"@type":"Answer","text":"El traspaso se hace en paralelo a la operación de la empresa. Solicitamos los últimos balances, papeles de trabajo, declaraciones juradas presentadas y accesos con Clave Fiscal; auditamos la situación en ARCA, Rentas Córdoba y la Municipalidad, y ordenamos lo pendiente antes del primer vencimiento a cargo nuestro."}},
+        {"@type":"Question","name":"¿Atienden monotributistas y profesionales independientes?",
+         "acceptedAnswer":{"@type":"Answer","text":"Sí. Trabajamos con monotributistas, profesionales independientes, responsables inscriptos y sociedades. Para monotributo incluimos recategorizaciones semestrales, control de facturación acumulada, alta de puntos de venta, Ingresos Brutos y habilitación municipal."}},
+        {"@type":"Question","name":"¿Qué documentación necesitan para liquidar los sueldos de mi empresa?",
+         "acceptedAnswer":{"@type":"Answer","text":"Necesitamos el convenio colectivo aplicable, la nómina con fechas de ingreso y categorías, novedades del mes (horas extras, licencias, adelantos), constancia de alta en el Registro de Altas y Bajas y datos de la ART. Con eso emitimos recibos, el Libro de Sueldos Digital y el F.931 dentro del calendario de vencimientos."}},
+        {"@type":"Question","name":"¿Se puede trabajar en forma remota o hay que ir a la oficina?",
+         "acceptedAnswer":{"@type":"Answer","text":"Ambas modalidades están disponibles. La documentación se envía en forma digital y las reuniones se hacen por videollamada o en la oficina de Ayacucho 395, Piso 7 Of. C, en el centro de Córdoba, según prefiera el cliente."}},
+        {"@type":"Question","name":"¿Atienden intimaciones y fiscalizaciones de ARCA o Rentas Córdoba?",
+         "acceptedAnswer":{"@type":"Answer","text":"Sí. Analizamos el requerimiento, armamos el descargo con respaldo documental, gestionamos planes de pago cuando corresponde y llevamos la representación técnica durante todo el procedimiento ante ARCA, Rentas de la Provincia de Córdoba y la Municipalidad."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#inicio" class="brand" aria-label="Vélez &amp; Asociados — Inicio">
+      <!-- Marca: construcción geométrica del monograma V -->
+      <svg class="brand__mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <rect class="mk-geo" x="2" y="2" width="96" height="96" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+        <circle class="mk-geo" cx="38" cy="38" r="27" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
+        <path class="mk-geo" d="M2 65 A63 63 0 0 0 65 2" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
+        <path d="M17 16 L50 84 L83 16" stroke="currentColor" stroke-width="5.5" stroke-linejoin="miter"/>
+        <path d="M31 16 L50 55 L69 16" stroke="var(--ink)" stroke-width="4.5" opacity=".9"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">Vélez <em style="font-style:normal;color:var(--gold)">&amp;</em> Asociados</span>
+        <span class="brand__tag">Estudio Contable · Consultora PyME</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#sociedades">Sociedades</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#estudio">Estudio</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+
+    <div class="header__cta">
+      <!-- REEMPLAZAR: teléfono real del estudio -->
+      <a class="header__phone" href="tel:+543510000000">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7A2 2 0 0 1 22 16.9z"/></svg>
+        351 000-0000
+      </a>
+      <a class="btn btn--sm" href="#contacto">
+        <span>Agendar consulta</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+        <i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Drawer móvil -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <nav>
+    <a href="#servicios" style="--d:.08s"><small>01</small> Servicios</a>
+    <a href="#sociedades" style="--d:.14s"><small>02</small> Sociedades</a>
+    <a href="#proceso" style="--d:.2s"><small>03</small> Proceso</a>
+    <a href="#estudio" style="--d:.26s"><small>04</small> Estudio</a>
+    <a href="#preguntas" style="--d:.32s"><small>05</small> Preguntas</a>
+    <a href="#ubicacion" style="--d:.38s"><small>06</small> Ubicación</a>
+    <a href="#contacto" style="--d:.44s"><small>07</small> Contacto</a>
+  </nav>
+  <div class="drawer__foot">
+    <a href="tel:+543510000000">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7A2 2 0 0 1 22 16.9z"/></svg>
+      351 000-0000
+    </a>
+    <a href="https://maps.app.goo.gl/wVXTVe7ze9c1tKPV9" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Ayacucho 395, Piso 7 Of. C — Córdoba
+    </a>
+  </div>
+</div>
+
+<main id="contenido">
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero" id="inicio">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__grid"></div>
+    <div class="hero__glow"></div>
+    <div class="hero__spot" id="spot"></div>
+    <div class="hero__noise"></div>
+  </div>
+
+  <!-- Construcción geométrica decorativa -->
+  <svg class="hero__geo" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+    <rect class="g-line" x="20" y="20" width="160" height="160"/>
+    <circle class="g-line" cx="80" cy="80" r="60"/>
+    <circle class="g-line" cx="120" cy="120" r="60"/>
+    <path class="g-line" d="M20 20 L180 180 M180 20 L20 180"/>
+    <path class="g-gold g-draw" style="--len:300" d="M55 40 L100 155 L145 40"/>
+    <path class="g-gold g-draw" style="--len:220" d="M75 40 L100 105 L125 40"/>
+    <path class="g-line" d="M20 100 H180 M100 20 V180"/>
+  </svg>
+
+  <div class="container hero__inner">
+    <div>
+      <p class="eyebrow" data-reveal>Córdoba capital · Ayacucho 395 · También online</p>
+      <h1 class="hero__title" data-reveal style="--d:.08s">
+        Números claros para <em>decisiones firmes</em>.
+      </h1>
+      <p class="hero__sub" data-reveal style="--d:.16s">
+        Estudio contable y consultora PyME. Liquidamos sueldos e impuestos municipales,
+        provinciales y nacionales, confeccionamos balances y constituimos SAS, SRL y SA
+        con criterio técnico y respuestas concretas.
+      </p>
+      <div class="hero__actions" data-reveal style="--d:.24s">
+        <a class="btn" href="#contacto">
+          <span>Agendar primera consulta</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#servicios"><span>Ver servicios</span></a>
+      </div>
+      <div class="hero__chips" data-reveal style="--d:.32s">
+        <span class="chip"><i class="dot"></i>Profesionales matriculados en el CPCE Córdoba</span>
+        <span class="chip"><i class="dot"></i>Atención presencial y por videollamada</span>
+        <span class="chip"><i class="dot"></i>Gestión 100% digital</span>
+      </div>
+    </div>
+
+    <aside class="hero__aside" data-reveal style="--d:.3s">
+      <h2>Áreas de práctica</h2>
+      <ul class="mini-list">
+        <li><a href="#servicios"><b>Liquidación de sueldos</b>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><a href="#servicios"><b>Liquidaciones impositivas</b>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><a href="#sociedades"><b>Constitución de sociedades</b>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><a href="#servicios"><b>Balances y cuentas</b>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><a href="#servicios"><b>Consultoría legal e impositiva</b>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      </ul>
+      <p class="hero__card-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M11 12h1v4h1"/></svg>
+        La primera reunión de diagnóstico es sin cargo: relevamos tu situación y te
+        proponemos un plan de trabajo por escrito.
+      </p>
+    </aside>
+  </div>
+</section>
+
+<!-- =========================================================
+     MÉTRICAS  (EDITAR con los números reales del estudio)
+     ========================================================= -->
+<section class="metrics" aria-label="El estudio en números">
+  <div class="container">
+    <div class="metrics__grid">
+      <div class="metric">
+        <p class="metric__num"><span data-count="15">0</span><span class="suf">+</span></p>
+        <p class="metric__label">años de ejercicio profesional en Córdoba</p>
+      </div>
+      <div class="metric">
+        <p class="metric__num"><span data-count="5">0</span></p>
+        <p class="metric__label">áreas de servicio integradas en un solo estudio</p>
+      </div>
+      <div class="metric">
+        <p class="metric__num"><span data-count="48">0</span><span class="suf">h</span></p>
+        <p class="metric__label">plazo de respuesta a consultas de clientes</p>
+      </div>
+      <div class="metric">
+        <p class="metric__num"><span data-count="3">0</span></p>
+        <p class="metric__label">niveles fiscales cubiertos: municipal, provincial y nacional</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TICKER
+     ========================================================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <div class="ticker__group">
+      <span>Liquidación de sueldos</span><span>IVA y Ganancias</span><span>Ingresos Brutos</span>
+      <span>Convenio Multilateral</span><span>Constitución de SAS</span><span>Balances</span>
+      <span>Monotributo</span><span>Comercio e Industria</span><span>Planificación fiscal</span>
+    </div>
+    <div class="ticker__group">
+      <span>Liquidación de sueldos</span><span>IVA y Ganancias</span><span>Ingresos Brutos</span>
+      <span>Convenio Multilateral</span><span>Constitución de SAS</span><span>Balances</span>
+      <span>Monotributo</span><span>Comercio e Industria</span><span>Planificación fiscal</span>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     SERVICIOS
+     ========================================================= -->
+<section class="section" id="servicios">
+  <div class="container">
+    <div class="services__top">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Servicios</p>
+        <h2 class="display">Todo lo que tu empresa necesita, <em>bajo un mismo criterio</em></h2>
+      </div>
+      <p class="lead" style="--d:.1s" data-reveal>
+        Cinco áreas de práctica que trabajan coordinadas: lo laboral, lo impositivo,
+        lo societario y lo contable con una misma lectura del negocio. Podés tomar un
+        servicio puntual o delegar el acompañamiento completo.
+      </p>
+    </div>
+
+    <div class="cards">
+      <!-- 01 Sueldos -->
+      <article class="card" data-reveal>
+        <p class="card__num">01</p>
+        <div class="card__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="6" y="10" width="36" height="28" rx="3"/><path d="M6 18h36"/>
+            <path d="M13 26h9M13 31h14"/><circle cx="34" cy="29" r="4.5"/>
+          </svg>
+        </div>
+        <h3>Liquidación de sueldos</h3>
+        <p>Recibos y cargas sociales al día: Libro de Sueldos Digital, altas y bajas,
+          F.931, aplicación de convenios colectivos, licencias, SAC y liquidaciones finales.</p>
+        <div class="card__tags"><i>Libro Digital</i><i>F.931</i><i>Convenios</i><i>ART</i></div>
+      </article>
+
+      <!-- 02 Impuestos -->
+      <article class="card" data-reveal style="--d:.08s">
+        <p class="card__num">02</p>
+        <div class="card__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 6h24v36H12z"/><path d="M18 15h12M18 22h12M18 29h6"/><path d="M28 34l4 4 6-8"/>
+          </svg>
+        </div>
+        <h3>Liquidaciones impositivas</h3>
+        <p>Presentaciones mensuales y anuales en los tres niveles: IVA, Ganancias y
+          Bienes Personales, Ingresos Brutos y Convenio Multilateral, Comercio e Industria
+          y Régimen Simplificado.</p>
+        <div class="card__tags"><i>ARCA</i><i>Rentas Córdoba</i><i>Municipal</i><i>Monotributo</i></div>
+      </article>
+
+      <!-- 03 Sociedades -->
+      <article class="card" data-reveal style="--d:.16s">
+        <p class="card__num">03</p>
+        <div class="card__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 42h36"/><path d="M10 42V20l14-9 14 9v22"/><path d="M19 42V29h10v13"/><path d="M24 11V5"/>
+          </svg>
+        </div>
+        <h3>Constitución de sociedades</h3>
+        <p>SAS, SRL y SA de principio a fin: estatuto, inscripción en la Inspección de
+          Personas Jurídicas de Córdoba, CUIT, libros digitales e inscripciones impositivas.</p>
+        <div class="card__tags"><i>SAS</i><i>SRL</i><i>SA</i><i>IPJ Córdoba</i></div>
+      </article>
+
+      <!-- 04 Balances -->
+      <article class="card" data-reveal style="--d:.06s">
+        <p class="card__num">04</p>
+        <div class="card__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 41h34"/><rect x="11" y="26" width="7" height="15"/><rect x="21" y="18" width="7" height="23"/><rect x="31" y="9" width="7" height="32"/>
+          </svg>
+        </div>
+        <h3>Balances y seguimiento de cuentas</h3>
+        <p>Estados contables con firma profesional, conciliaciones bancarias, control de
+          cuentas corrientes e informes de gestión para leer el resultado mes a mes.</p>
+        <div class="card__tags"><i>Estados contables</i><i>Conciliaciones</i><i>Informes</i></div>
+      </article>
+
+      <!-- 05 Consultoría -->
+      <article class="card" data-reveal style="--d:.14s">
+        <p class="card__num">05</p>
+        <div class="card__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M24 6l14 7v10c0 9-6 15-14 19-8-4-14-10-14-19V13z"/><path d="M18 24l4 4 9-9"/>
+          </svg>
+        </div>
+        <h3>Consultoría legal e impositiva</h3>
+        <p>Planificación fiscal, contratos, materia societaria y laboral, y representación
+          técnica en intimaciones y fiscalizaciones de ARCA, Rentas y la Municipalidad.</p>
+        <div class="card__tags"><i>Planificación</i><i>Contratos</i><i>Fiscalizaciones</i></div>
+      </article>
+
+      <!-- CTA -->
+      <article class="card card--cta" data-reveal style="--d:.22s">
+        <div>
+          <p class="card__num" style="color:var(--gold)">06</p>
+          <h3 class="display" style="margin-top:1rem">Acompañamiento mensual integral</h3>
+          <p style="margin-top:.9rem">Un abono mensual que reúne sueldos, impuestos, contabilidad y consultoría,
+            con calendario de vencimientos, reuniones de revisión y un contacto directo para cada consulta.</p>
+        </div>
+        <a class="btn" href="#contacto">
+          <span>Pedir propuesta</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SOCIEDADES — tabla comparativa (contenido citable para IA)
+     ========================================================= -->
+<section class="section section--ink" id="sociedades">
+  <div class="container">
+    <div class="soc__layout">
+      <div>
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Constitución de sociedades</p>
+          <h2 class="display">Tu empresa constituida y <em>operativa desde el día uno</em></h2>
+          <p>Redactamos el estatuto, inscribimos la sociedad en la Inspección de Personas
+            Jurídicas de Córdoba y dejamos la estructura lista para facturar: CUIT, libros,
+            impuestos y cuenta bancaria en marcha.</p>
+        </div>
+
+        <h3 class="eyebrow" style="margin-top:2.8rem" data-reveal>Incluye</h3>
+        <ul class="checklist" data-reveal style="--d:.08s">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            Elección del tipo societario según el proyecto, los socios y la carga fiscal
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            Redacción del instrumento constitutivo, objeto social y capital
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            Inscripción en la IPJ Córdoba y publicación de edictos
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            CUIT, Clave Fiscal, domicilio electrónico y libros digitales
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            Inscripción en IVA, Ganancias, Ingresos Brutos y habilitación municipal
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            Apertura de cuenta bancaria y alta como empleador
+          </li>
+        </ul>
+
+        <a class="link-u" href="#contacto" style="margin-top:2rem;color:var(--on-ink)" data-reveal>
+          Consultar por una constitución
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div data-reveal style="--d:.12s">
+        <div class="table-wrap">
+          <table>
+            <caption>SAS, SRL o SA — comparación práctica</caption>
+            <thead>
+              <tr><th scope="col">Criterio</th><th scope="col">SAS</th><th scope="col">SRL</th><th scope="col">SA</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Socios</th>
+                <td>Desde 1</td><td>Desde 2</td><td>Desde 2 (o unipersonal con requisitos)</td>
+              </tr>
+              <tr>
+                <th scope="row">Capital</th>
+                <td>Mínimo legal equivalente a 2 salarios mínimos</td>
+                <td>Definido por los socios en cuotas</td>
+                <td>Mínimo legal más alto, dividido en acciones</td>
+              </tr>
+              <tr>
+                <th scope="row">Responsabilidad</th>
+                <td colspan="3">Limitada al capital suscripto en las tres formas</td>
+              </tr>
+              <tr>
+                <th scope="row">Administración</th>
+                <td>Administrador titular y suplente</td><td>Gerencia</td><td>Directorio y sindicatura según el caso</td>
+              </tr>
+              <tr>
+                <th scope="row">Plazo estimado</th>
+                <td>15 a 20 días hábiles</td><td>30 a 45 días hábiles</td><td>45 a 60 días hábiles</td>
+              </tr>
+              <tr>
+                <th scope="row">Recomendada para</th>
+                <td>Proyectos nuevos, equipos chicos, operación digital</td>
+                <td>Empresas familiares y sociedades de dos o más socios</td>
+                <td>Estructuras de mayor escala e inversores</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">
+          Cuadro orientativo con fines informativos. Los importes de capital y los plazos de
+          inscripción se confirman al inicio del trámite según la normativa vigente y el
+          estado de la Inspección de Personas Jurídicas de Córdoba.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PROCESO
+     ========================================================= -->
+<section class="section" id="proceso">
+  <div class="container">
+    <div class="section-head section-head--center" data-reveal>
+      <p class="eyebrow">Cómo trabajamos</p>
+      <h2 class="display">Cuatro pasos, un <em>plan por escrito</em></h2>
+      <p>Un método simple para que sepas siempre qué sigue, quién lo hace y cuándo vence.</p>
+    </div>
+
+    <div class="steps">
+      <article class="step" data-reveal data-step>
+        <div class="step__bar"><span class="step__dot"></span></div>
+        <p class="step__n">PASO 01</p>
+        <h3>Diagnóstico</h3>
+        <p>Reunión inicial sin cargo. Relevamos la actividad, la nómina, la situación
+          impositiva y los pendientes en ARCA, Rentas y la Municipalidad.</p>
+      </article>
+      <article class="step" data-reveal style="--d:.08s" data-step>
+        <div class="step__bar"><span class="step__dot"></span></div>
+        <p class="step__n">PASO 02</p>
+        <h3>Propuesta</h3>
+        <p>Alcance, honorarios y calendario fiscal por escrito. Sabés desde el primer día
+          qué incluye el servicio y con qué frecuencia trabajamos.</p>
+      </article>
+      <article class="step" data-reveal style="--d:.16s" data-step>
+        <div class="step__bar"><span class="step__dot"></span></div>
+        <p class="step__n">PASO 03</p>
+        <h3>Implementación</h3>
+        <p>Alta de accesos, orden de la documentación, puesta al día de presentaciones y
+          armado del tablero de cuentas.</p>
+      </article>
+      <article class="step" data-reveal style="--d:.24s" data-step>
+        <div class="step__bar"><span class="step__dot"></span></div>
+        <p class="step__n">PASO 04</p>
+        <h3>Acompañamiento</h3>
+        <p>Cumplimiento mensual, avisos previos a cada vencimiento, reportes de gestión y
+          reuniones de revisión periódicas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SECTORES
+     ========================================================= -->
+<section class="section section--paper-2" aria-labelledby="sectores-h">
+  <div class="container rubros__layout">
+    <div class="rubros__aside" data-reveal>
+      <p class="eyebrow">A quién acompañamos</p>
+      <h2 class="display" id="sectores-h" style="font-size:var(--step-3);margin-top:1.1rem">
+        Rubros con los que <em>trabajamos a diario</em>
+      </h2>
+      <p>Cada actividad tiene su propio régimen impositivo, su convenio y sus tiempos.
+        Conocer el rubro de antemano acorta el camino en cada gestión.</p>
+      <a class="link-u" href="#contacto">
+        Consultar por tu actividad
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <ul class="rubros" data-reveal style="--d:.08s">
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 9l2-5h14l2 5M4 9h16v11H4z"/></svg></span>Comercios y retail</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2"/></svg></span>Servicios profesionales</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 20h16M6 20V9l6-4 6 4v11"/></svg></span>Construcción y oficios</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M5 3v8a3 3 0 0 0 6 0V3M8 11v10M19 3c-2 2-2 6 0 8v10"/></svg></span>Gastronomía</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h3l2.5 11h11L21 7H7"/></svg></span>E-commerce</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg></span>Startups y SAS</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></span>Monotributistas</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 20h18M6 20V10M12 20V4M18 20v-8"/></svg></span>Empresas familiares</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 18c4-8 12-8 16 0M8 10V4h8v6"/></svg></span>Transporte y logística</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 3c3 4 3 14 0 18-3-4-3-14 0-18zM3 12h18"/></svg></span>Agro y agroindustria</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13M9 21v-6h6v6"/></svg></span>Alquileres e inmuebles</li>
+      <li class="rubro"><span class="rubro__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M7 7h10M5 12h14M7 17h10"/></svg></span>Salud y consultorios</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =========================================================
+     ESTUDIO / NOSOTROS
+     ========================================================= -->
+<section class="section section--ink" id="estudio">
+  <div class="container about">
+    <div class="about__visual" data-reveal>
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="96" height="96" stroke="rgba(246,244,240,.2)" stroke-width=".8"/>
+        <circle cx="38" cy="38" r="27" stroke="rgba(246,244,240,.16)" stroke-width=".8"/>
+        <path d="M2 65 A63 63 0 0 0 65 2" stroke="rgba(192,162,101,.5)" stroke-width=".8"/>
+        <path d="M17 16 L50 84 L83 16" stroke="#F6F4F0" stroke-width="4"/>
+        <path d="M31 16 L50 55 L69 16" stroke="#0A0B0D" stroke-width="3.4"/>
+        <path d="M2 50 H98 M50 2 V98" stroke="rgba(246,244,240,.08)" stroke-width=".6"/>
+      </svg>
+      <span class="about__badge">Vélez &amp; Asociados</span>
+    </div>
+
+    <div>
+      <div class="section-head" data-reveal style="--d:.08s">
+        <p class="eyebrow">El estudio</p>
+        <h2 class="display">Conocemos tu empresa <em>por dentro</em></h2>
+        <p>Somos un estudio contable de Córdoba capital enfocado en PyMEs, comercios y
+          profesionales. Trabajamos con una lógica de consultora: entender el negocio primero
+          y después ordenar los números, para que cada decisión tenga respaldo técnico.</p>
+      </div>
+      <p class="muted" style="margin-top:1.4rem;color:var(--on-ink-2);max-width:58ch;--d:.12s" data-reveal>
+        Atendemos desde Ayacucho 395, Piso 7 Of. C, a pocas cuadras de los organismos con los
+        que gestionamos a diario. Cada cliente tiene un profesional asignado y un canal
+        directo de contacto.
+      </p>
+
+      <div class="values" data-reveal style="--d:.16s">
+        <div class="value">
+          <h3>Criterio técnico</h3>
+          <p>Cada recomendación se apoya en normativa vigente y en el análisis del caso concreto.</p>
+        </div>
+        <div class="value">
+          <h3>Trato directo</h3>
+          <p>Hablás siempre con el profesional que lleva tu carpeta.</p>
+        </div>
+        <div class="value">
+          <h3>Calendario a la vista</h3>
+          <p>Vencimientos anticipados y recordatorios antes de cada presentación.</p>
+        </div>
+        <div class="value">
+          <h3>Lenguaje claro</h3>
+          <p>Informes que se entienden y explicaciones en términos de negocio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PREGUNTAS FRECUENTES  (AEO — coincide con FAQPage schema)
+     ========================================================= -->
+<section class="section" id="preguntas">
+  <div class="container faq">
+    <div>
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2 class="display">Las consultas que <em>más nos llegan</em></h2>
+      </div>
+      <div class="faq__aside" style="margin-top:2.5rem" data-reveal>
+        <h3>¿Te quedó una duda puntual?</h3>
+        <p>Escribinos con el detalle de tu situación y te respondemos con una primera
+          orientación concreta, sin compromiso.</p>
+        <a class="btn btn--dark btn--block" href="#contacto"><span>Hacer una consulta</span></a>
+      </div>
+    </div>
+
+    <div class="faq__list" data-reveal style="--d:.08s">
+      <details>
+        <summary><span>¿Cuánto cuesta un estudio contable para una PyME en Córdoba?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="faq__answer">
+          <p><strong>El honorario se define según la cantidad de empleados, el volumen de facturación,
+            la condición impositiva y los impuestos que corresponda liquidar.</strong></p>
+          <p>En la primera reunión relevamos la situación real de la empresa y entregamos una
+            propuesta cerrada por escrito, con el alcance mensual, el calendario de vencimientos
+            y los trabajos anuales incluidos, como el balance y las declaraciones juradas.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>¿Cuánto tarda constituir una SAS en Córdoba y qué documentación necesito?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="faq__answer">
+          <p><strong>El trámite habitual se completa en aproximadamente 15 a 20 días hábiles desde la
+            firma del instrumento constitutivo.</strong></p>
+          <p>Se necesita DNI y CUIT de los socios, domicilio legal en la provincia, definición del
+            objeto y del capital social, y la designación del administrador titular y suplente.
+            Desde el estudio redactamos el estatuto, gestionamos la inscripción en la Inspección de
+            Personas Jurídicas de Córdoba, el CUIT, los libros digitales y las inscripciones en
+            ARCA, Rentas y la Municipalidad.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>¿Qué conviene: SAS, SRL o SA?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="faq__answer">
+          <p><strong>Depende de la cantidad de socios, el capital disponible, la escala del proyecto y
+            la velocidad con la que necesitás empezar a operar.</strong></p>
+          <p>La SAS se elige por su constitución rápida y su estructura flexible, ideal para
+            proyectos nuevos y equipos chicos. La SRL es habitual en empresas familiares y
+            sociedades de dos o más socios que priorizan un marco consolidado. La SA se adapta a
+            estructuras de mayor escala, con capital en acciones y directorio. En la consulta
+            inicial comparamos las tres opciones aplicadas a tu caso.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>¿Cómo es el traspaso desde mi contador actual?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="faq__answer">
+          <p><strong>El traspaso se hace en paralelo a la operación, sin interrumpir ningún vencimiento.</strong></p>
+          <p>Pedimos los últimos balances, papeles de trabajo, declaraciones juradas presentadas y
+            los accesos con Clave Fiscal. Con eso auditamos la situación en ARCA, Rentas Córdoba y
+            la Municipalidad, ordenamos lo pendiente y asumimos el calendario desde una fecha
+            acordada.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>¿Atienden monotributistas y profesionales independientes?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="faq__answer">
+          <p><strong>Sí, trabajamos con monotributistas, profesionales independientes, responsables
+            inscriptos y sociedades.</strong></p>
+          <p>Para el Régimen Simplificado incluimos recategorizaciones semestrales, control de la
+            facturación acumulada, alta de puntos de venta, Ingresos Brutos y habilitación
+            municipal, además del análisis del momento adecuado para pasar a responsable inscripto.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>¿Qué documentación necesitan para liquidar los sueldos de mi empresa?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="faq__answer">
+          <p><strong>El convenio colectivo aplicable, la nómina con fechas de ingreso y categorías, y
+            las novedades del mes.</strong></p>
+          <p>A eso se suman las constancias de alta en el Registro de Altas y Bajas y los datos de
+            la ART. Con esa información emitimos los recibos, el Libro de Sueldos Digital y el
+            F.931 dentro del calendario de vencimientos, junto con el detalle de cargas sociales
+            a ingresar.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>¿Se puede trabajar en forma remota o hay que ir a la oficina?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="faq__answer">
+          <p><strong>Las dos modalidades están disponibles y se combinan según tu preferencia.</strong></p>
+          <p>La documentación se envía en forma digital y las reuniones se hacen por videollamada o
+            en la oficina de Ayacucho 395, Piso 7 Of. C, en el centro de Córdoba. Muchos clientes
+            del interior de la provincia trabajan con nosotros de manera íntegramente remota.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>¿Atienden intimaciones y fiscalizaciones de ARCA o Rentas Córdoba?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="faq__answer">
+          <p><strong>Sí, con representación técnica durante todo el procedimiento.</strong></p>
+          <p>Analizamos el requerimiento, armamos el descargo con respaldo documental, gestionamos
+            planes de pago cuando corresponde y llevamos el seguimiento ante ARCA, la Dirección
+            General de Rentas de la Provincia de Córdoba y la Municipalidad hasta el cierre del
+            expediente.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     UBICACIÓN — oficina + mapa + atención online
+     ========================================================= -->
+<section class="section section--paper-2" id="ubicacion">
+  <div class="container">
+    <div class="loc">
+      <div>
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Ubicación</p>
+          <h2 class="display">En el centro de Córdoba, <em>y también online</em></h2>
+          <p>La oficina está en Ayacucho 395, a pocas cuadras de los organismos con los que
+            gestionamos a diario. Y si te queda lejos, trabajamos igual: documentación
+            digital y reuniones por videollamada.</p>
+        </div>
+
+        <div class="loc__actions" data-reveal style="--d:.1s">
+          <a class="btn" href="#contacto">
+            <span>Enviar consulta</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="https://maps.app.goo.gl/wVXTVe7ze9c1tKPV9" target="_blank" rel="noopener">
+            <span>Cómo llegar</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M17 7h-7M17 7v7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mapa con carga diferida para no penalizar el LCP -->
+      <div class="map map--light" id="map" data-reveal style="--d:.08s">
+        <span class="map__ph">Cargando mapa…</span>
+        <iframe
+          data-src="https://www.google.com/maps?q=Ayacucho%20395%2C%20C%C3%B3rdoba%2C%20Argentina&amp;z=16&amp;output=embed"
+          title="Ubicación de Estudio Contable Vélez &amp; Asociados en Ayacucho 395, Córdoba"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="loc__cards" data-reveal style="--d:.12s">
+      <div class="loc__card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <h3>Oficina</h3>
+          <a href="https://maps.app.goo.gl/wVXTVe7ze9c1tKPV9" target="_blank" rel="noopener">Ayacucho 395, Piso 7 Of. C</a>
+          <small>X5000 Córdoba, Argentina</small>
+        </div>
+      </div>
+      <div class="loc__card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><path d="M9 11l3 2 3-4"/></svg>
+        <div>
+          <h3>Atención online</h3>
+          <p>Videollamada y documentación digital</p>
+          <small>Clientes del interior y de otras provincias</small>
+        </div>
+      </div>
+      <div class="loc__card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <div>
+          <h3>Horario</h3>
+          <p>Lunes a viernes, 9 a 18 h</p>
+          <small>Presencial o por videollamada, con turno previo</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACTO — formulario + WhatsApp directo
+     ========================================================= -->
+<section class="section section--ink" id="contacto">
+  <div class="container contact">
+    <div>
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Contacto</p>
+        <h2 class="display">Empecemos por una <em>primera conversación</em></h2>
+        <p>Contanos en qué está tu empresa hoy. Respondemos con una orientación inicial y
+          la propuesta de una reunión de diagnóstico sin cargo.</p>
+      </div>
+
+      <!-- NOTA: todos los campos son obligatorios y la consulta pide 75 caracteres
+           como mínimo. El envío usa FORM_ENDPOINT (ver el script del final). -->
+      <form class="form" id="form" novalidate>
+        <div class="form__row">
+          <div class="field">
+            <label for="nombre">Nombre <i>*</i></label>
+            <input id="nombre" name="nombre" type="text" placeholder="Juan" required autocomplete="given-name">
+            <span class="err">Completá tu nombre</span>
+          </div>
+          <div class="field">
+            <label for="apellido">Apellido <i>*</i></label>
+            <input id="apellido" name="apellido" type="text" placeholder="Pérez" required autocomplete="family-name">
+            <span class="err">Completá tu apellido</span>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="empresa">Nombre de la empresa <i>*</i></label>
+            <input id="empresa" name="empresa" type="text" placeholder="Comercio del Centro SRL" required autocomplete="organization">
+            <span class="err">Completá el nombre de la empresa</span>
+          </div>
+          <div class="field">
+            <label for="actividad">Actividad <i>*</i></label>
+            <input id="actividad" name="actividad" type="text" placeholder="Gastronomía, comercio, servicios…" required>
+            <span class="err">Completá la actividad</span>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="telefono">Teléfono <i>*</i></label>
+            <input id="telefono" name="telefono" type="tel" placeholder="351 000 0000" required autocomplete="tel">
+            <span class="err">Completá un teléfono de contacto</span>
+          </div>
+          <div class="field">
+            <label for="servicio">Consulta sobre <i>*</i></label>
+            <select id="servicio" name="servicio" required>
+              <option value="">Elegí un servicio</option>
+              <option>Liquidación de sueldos</option>
+              <option>Liquidaciones impositivas</option>
+              <option>Constitución de sociedad (SAS, SRL, SA)</option>
+              <option>Balances y seguimiento de cuentas</option>
+              <option>Consultoría legal e impositiva</option>
+              <option>Acompañamiento mensual integral</option>
+              <option>Otra consulta</option>
+            </select>
+            <span class="err">Elegí una opción</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field__head">
+            <label for="mensaje">Tu consulta <i>*</i></label>
+            <span class="counter" id="counter" aria-live="polite">0 / 75</span>
+          </div>
+          <textarea id="mensaje" name="mensaje" minlength="75"
+            placeholder="Contanos la situación: cantidad de empleados, condición impositiva, qué necesitás resolver…" required></textarea>
+          <span class="err">Contanos un poco más: mínimo 75 caracteres</span>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span>Autorizo el uso de mis datos para responder esta consulta, conforme a la
+            <a href="#privacidad">política de privacidad</a>. <i>*</i></span>
+        </label>
+
+        <div class="form__submit">
+          <button class="btn" type="submit">
+            <span>Enviar consulta</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12L20 4.5 13 20l-2.5-6z"/></svg>
+          </button>
+          <span class="form__submit-note">Todos los campos son obligatorios</span>
+        </div>
+
+        <p class="form__status" id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="contact__aside" data-reveal style="--d:.1s">
+      <!-- REEMPLAZAR: número real en los dos href de wa.me y en tel: -->
+      <div class="wa-card">
+        <h3 class="display">¿Preferís hablar directo?</h3>
+        <p>Escribinos por WhatsApp y te respondemos en el día. Es la vía más rápida para
+          una consulta puntual o para coordinar la primera reunión.</p>
+
+        <div class="wa-card__split">
+          <a class="btn btn--wa" href="https://wa.me/5493510000000?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20al%20estudio." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.05-1 .05-1.6-.15-.9-.3-3-1.2-4.5-3.5-.55-.85-1-1.9-1-2.9 0-.9.45-1.35.65-1.6.2-.2.45-.3.65-.3h.45c.2 0 .35.05.5.4l.7 1.7c.05.15.1.3 0 .5l-.35.5c-.1.15-.25.25-.1.5.15.3.6 1 1.2 1.5.75.7 1.35.9 1.6 1 .2.1.35.05.5-.1l.6-.7c.15-.2.3-.15.5-.1l1.6.75c.3.15.35.25.35.45.05.2 0 .7-.2 1.15z"/></svg>
+            <span>Hacer una consulta</span>
+          </a>
+          <a class="btn btn--ghost" href="https://wa.me/5493510000000?text=Hola%2C%20quisiera%20reservar%20una%20reuni%C3%B3n%20de%20diagn%C3%B3stico." target="_blank" rel="noopener">
+            <span>Reservar una reunión</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <p class="wa-card__note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          Lunes a viernes de 9 a 18 h. La primera reunión de diagnóstico es sin cargo,
+          presencial o por videollamada.
+        </p>
+      </div>
+
+      <div class="wa-card wa-card--note">
+        <p class="wa-card__note" style="font-size:.85rem;color:var(--on-ink-2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7A2 2 0 0 1 22 16.9z"/></svg>
+          <span>También podés llamarnos al
+            <a href="tel:+543510000000" style="color:var(--gold);white-space:nowrap">+54 351 000-0000</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="footer">
+  <div class="container footer__top">
+    <div class="footer__brand">
+      <a href="#inicio" class="brand" aria-label="Vélez &amp; Asociados — Inicio">
+        <svg class="brand__mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="96" height="96" stroke="currentColor" stroke-width="1.5" opacity=".4"/>
+          <circle cx="38" cy="38" r="27" stroke="currentColor" stroke-width="1.5" opacity=".26"/>
+          <path d="M17 16 L50 84 L83 16" stroke="currentColor" stroke-width="5.5"/>
+          <path d="M31 16 L50 55 L69 16" stroke="var(--ink)" stroke-width="4.5"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">Vélez <em style="font-style:normal;color:var(--gold)">&amp;</em> Asociados</span>
+          <span class="brand__tag">Estudio Contable · Consultora PyME</span>
+        </span>
+      </a>
+      <p>Estudio contable y consultora PyME en Córdoba capital. Sueldos, impuestos,
+        balances y sociedades con criterio técnico y acompañamiento cercano.</p>
+
+      <div class="footer__actions">
+        <a class="btn btn--sm" href="#contacto">
+          <span>Enviar consulta</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <!-- REEMPLAZAR: número real de WhatsApp -->
+        <a class="btn btn--sm btn--wa" href="https://wa.me/5493510000000?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20al%20estudio." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.05-1 .05-1.6-.15-.9-.3-3-1.2-4.5-3.5-.55-.85-1-1.9-1-2.9 0-.9.45-1.35.65-1.6.2-.2.45-.3.65-.3h.45c.2 0 .35.05.5.4l.7 1.7c.05.15.1.3 0 .5l-.35.5c-.1.15-.25.25-.1.5.15.3.6 1 1.2 1.5.75.7 1.35.9 1.6 1 .2.1.35.05.5-.1l.6-.7c.15-.2.3-.15.5-.1l1.6.75c.3.15.35.25.35.45.05.2 0 .7-.2 1.15z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Servicios</h3>
+      <ul>
+        <li><a href="#servicios">Liquidación de sueldos</a></li>
+        <li><a href="#servicios">Liquidaciones impositivas</a></li>
+        <li><a href="#sociedades">Constitución de sociedades</a></li>
+        <li><a href="#servicios">Balances y cuentas</a></li>
+        <li><a href="#servicios">Consultoría legal e impositiva</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Estudio</h3>
+      <ul>
+        <li><a href="#estudio">Quiénes somos</a></li>
+        <li><a href="#proceso">Cómo trabajamos</a></li>
+        <li><a href="#preguntas">Preguntas frecuentes</a></li>
+        <li><a href="#ubicacion">Ubicación y atención online</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Oficina</h3>
+      <ul>
+        <li><a href="https://maps.app.goo.gl/wVXTVe7ze9c1tKPV9" target="_blank" rel="noopener">Ayacucho 395, Piso 7 Of. C<br>X5000 Córdoba, Argentina</a></li>
+        <li><a href="tel:+543510000000">+54 351 000-0000</a></li>
+        <li><a href="https://wa.me/5493510000000" target="_blank" rel="noopener">Consultar por WhatsApp</a></li>
+        <li>Lunes a viernes, 9 a 18 h · También online</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> Estudio Contable Vélez &amp; Asociados. Todos los derechos reservados.</p>
+      <p><a href="#privacidad">Política de privacidad</a> · Sitio desarrollado por <a href="#" rel="noopener">ALORA</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra de acción móvil -->
+<div class="mobile-bar" id="mobileBar">
+  <a class="btn btn--ghost btn--sm" href="tel:+543510000000">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7A2 2 0 0 1 22 16.9z"/></svg>
+    <span>Llamar</span>
+  </a>
+  <a class="btn btn--sm" href="#contacto"><span>Agendar consulta</span></a>
+</div>
+
+<!-- Botón flotante de WhatsApp — REEMPLAZAR el número en el href -->
+<a class="wa-float" id="waFloat" href="https://wa.me/5493510000000?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20al%20estudio."
+   target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al estudio">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.05-1 .05-1.6-.15-.9-.3-3-1.2-4.5-3.5-.55-.85-1-1.9-1-2.9 0-.9.45-1.35.65-1.6.2-.2.45-.3.65-.3h.45c.2 0 .35.05.5.4l.7 1.7c.05.15.1.3 0 .5l-.35.5c-.1.15-.25.25-.1.5.15.3.6 1 1.2 1.5.75.7 1.35.9 1.6 1 .2.1.35.05.5-.1l.6-.7c.15-.2.3-.15.5-.1l1.6.75c.3.15.35.25.35.45.05.2 0 .7-.2 1.15z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script>
+/* =========================================================================
+   VÉLEZ & ASOCIADOS — Interacciones
+   01. Header pegajoso + barra de progreso + botón volver arriba
+   02. Menú móvil (drawer)
+   03. Aparición al hacer scroll (IntersectionObserver)
+   04. Contadores animados
+   05. Navegación activa según sección
+   06. Acordeón: un panel abierto a la vez
+   07. Foco cursor en el hero
+   08. Carga diferida del mapa
+   09. Validación y envío del formulario
+   10. Año en el footer
+   ========================================================================= */
+(function(){
+  'use strict';
+  const $  = (s,c)=> (c||document).querySelector(s);
+  const $$ = (s,c)=> Array.from((c||document).querySelectorAll(s));
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- 01. Header + progreso + volver arriba ---- */
+  const header = $('#header');
+  const progress = $('#progress');
+  const toTop = $('#toTop');
+  const mobileBar = $('#mobileBar');
+  const waFloat = $('#waFloat');
+
+  let ticking = false;
+  function onScroll(){
+    const y = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    header.classList.toggle('is-stuck', y > 24);
+    progress.style.transform = 'scaleX(' + (max > 0 ? y/max : 0) + ')';
+    toTop.classList.toggle('is-visible', y > 700);
+    mobileBar.classList.toggle('is-visible', y > 500);
+    if(waFloat) waFloat.classList.toggle('is-visible', y > 500);
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ ticking = true; requestAnimationFrame(onScroll); }
+  }, {passive:true});
+  onScroll();
+
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior: reduced ? 'auto' : 'smooth'});
+  });
+
+  /* ---- 02. Drawer móvil ---- */
+  const burger = $('#burger');
+  const drawer = $('#drawer');
+  function setDrawer(open){
+    drawer.classList.toggle('is-open', open);
+    burger.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    document.body.classList.toggle('is-locked', open);
+  }
+  burger.addEventListener('click', function(){
+    setDrawer(!drawer.classList.contains('is-open'));
+  });
+  $$('#drawer a').forEach(function(a){
+    a.addEventListener('click', function(){ setDrawer(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && drawer.classList.contains('is-open')){ setDrawer(false); burger.focus(); }
+  });
+
+  /* ---- 03. Aparición al hacer scroll ---- */
+  const revealables = $$('[data-reveal]');
+  if('IntersectionObserver' in window && !reduced){
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, {rootMargin:'0px 0px -12% 0px', threshold:0.12});
+    revealables.forEach(function(el){ io.observe(el); });
+
+    // Barras del proceso
+    const ioStep = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('is-in'); ioStep.unobserve(en.target); }
+      });
+    }, {threshold:0.35});
+    $$('[data-step]').forEach(function(el){ ioStep.observe(el); });
+  } else {
+    revealables.forEach(function(el){ el.classList.add('is-in'); });
+    $$('[data-step]').forEach(function(el){ el.classList.add('is-in'); });
+  }
+
+  /* ---- 04. Contadores ---- */
+  function animateCount(el){
+    const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    if(reduced){ el.textContent = target; return; }
+    const dur = 1400, t0 = performance.now();
+    (function tick(now){
+      const p = Math.min((now - t0)/dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased);
+      if(p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+  function setFinal(el){ el.textContent = parseInt(el.getAttribute('data-count'), 10) || 0; }
+
+  const counters = $$('[data-count]');
+  if('IntersectionObserver' in window){
+    const ioNum = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          animateCount(en.target); ioNum.unobserve(en.target);
+        } else if(en.boundingClientRect.bottom < 0){
+          // La sección quedó por encima del viewport (entrada por enlace directo
+          // o salto de scroll): mostramos el valor final sin animar.
+          setFinal(en.target); ioNum.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.6});
+    counters.forEach(function(el){ ioNum.observe(el); });
+  } else {
+    counters.forEach(setFinal);
+  }
+
+  /* ---- 05. Navegación activa ---- */
+  const navLinks = $$('#nav a');
+  const sections = navLinks
+    .map(function(a){ return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
+  if('IntersectionObserver' in window && sections.length){
+    const ioNav = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          navLinks.forEach(function(a){
+            a.classList.toggle('is-active', a.getAttribute('href') === '#' + en.target.id);
+          });
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    sections.forEach(function(s){ ioNav.observe(s); });
+  }
+
+  /* ---- 06. Acordeón exclusivo ---- */
+  const faqItems = $$('.faq details');
+  faqItems.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open){ faqItems.forEach(function(o){ if(o !== d) o.open = false; }); }
+    });
+  });
+
+  /* ---- 07. Foco del cursor en el hero ---- */
+  const hero = $('.hero');
+  const spot = $('#spot');
+  if(hero && spot && !reduced && window.matchMedia('(hover:hover)').matches){
+    hero.addEventListener('pointermove', function(e){
+      const r = hero.getBoundingClientRect();
+      spot.style.setProperty('--mx', ((e.clientX - r.left)/r.width*100) + '%');
+      spot.style.setProperty('--my', ((e.clientY - r.top)/r.height*100) + '%');
+    });
+  }
+
+  /* ---- 08. Mapa diferido ---- */
+  const map = $('#map');
+  if(map){
+    const frame = $('iframe', map);
+    const ph = $('.map__ph', map);
+    function loadMap(){
+      if(frame.src) return;
+      frame.src = frame.getAttribute('data-src');
+      frame.addEventListener('load', function(){ if(ph) ph.remove(); });
+    }
+    if('IntersectionObserver' in window){
+      const ioMap = new IntersectionObserver(function(entries){
+        if(entries[0].isIntersecting){ loadMap(); ioMap.disconnect(); }
+      }, {rootMargin:'300px'});
+      ioMap.observe(map);
+    } else { loadMap(); }
+  }
+
+  /* ---- 09. Formulario ---- */
+  const form = $('#form');
+  const status = $('#status');
+  const counter = $('#counter');
+  const MSG_MIN = 75; // mínimo de caracteres de la consulta
+
+  /* PENDIENTE: pegar acá la URL del endpoint que recibe el formulario
+     (Formspree, Basin, Netlify Forms o un backend propio).
+     Mientras esté vacío, el envío queda deshabilitado y se avisa en pantalla. */
+  const FORM_ENDPOINT = '';
+
+  function fieldOf(input){ return input.closest('.field') || input.closest('.consent'); }
+  function markError(input, on){
+    const wrap = fieldOf(input);
+    if(wrap) wrap.classList.toggle('has-error', on);
+    input.setAttribute('aria-invalid', String(on));
+  }
+  function validate(input){
+    const v = (input.value || '').trim();
+    let ok = true;
+    if(input.type === 'checkbox') ok = input.checked;
+    else if(!v) ok = false;
+    else if(input.id === 'mensaje') ok = v.length >= MSG_MIN;
+    markError(input, !ok);
+    return ok;
+  }
+  function setStatus(msg, tone){
+    status.className = 'form__status is-visible' + (tone ? ' form__status--' + tone : '');
+    status.textContent = msg;
+  }
+
+  if(form){
+    // Contador de caracteres de la consulta
+    const mensaje = $('#mensaje');
+    if(mensaje && counter){
+      const paint = function(){
+        const n = mensaje.value.trim().length;
+        counter.textContent = n + ' / ' + MSG_MIN;
+        counter.classList.toggle('is-ok', n >= MSG_MIN);
+      };
+      mensaje.addEventListener('input', paint);
+      paint();
+    }
+
+    $$('input, select, textarea', form).forEach(function(input){
+      input.addEventListener('blur', function(){ validate(input); });
+      input.addEventListener('input', function(){
+        const w = fieldOf(input);
+        if(w && w.classList.contains('has-error')) validate(input);
+      });
+      input.addEventListener('change', function(){
+        const w = fieldOf(input);
+        if(w && w.classList.contains('has-error')) validate(input);
+      });
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const campos = $$('input, select, textarea', form);
+      const invalid = campos.filter(function(i){ return !validate(i); });
+
+      if(invalid.length){
+        const msj = invalid[0].id === 'mensaje' && invalid[0].value.trim().length
+          ? 'La consulta necesita al menos ' + MSG_MIN + ' caracteres.'
+          : 'Completá todos los campos para enviar la consulta.';
+        setStatus(msj, 'error');
+        invalid[0].focus();
+        return;
+      }
+
+      if(!FORM_ENDPOINT){
+        setStatus('El envío todavía no está conectado. Escribinos por WhatsApp mientras tanto.', 'error');
+        return;
+      }
+
+      const btn = $('button[type=submit]', form);
+      btn.disabled = true;
+      setStatus('Enviando tu consulta…');
+
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {'Accept': 'application/json'},
+        body: new FormData(form)
+      }).then(function(r){
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+        setStatus('Recibimos tu consulta. Te respondemos dentro de las 48 h hábiles.', 'ok');
+        form.reset();
+        if(counter){ counter.textContent = '0 / ' + MSG_MIN; counter.classList.remove('is-ok'); }
+      }).catch(function(){
+        setStatus('No pudimos enviar la consulta. Probá de nuevo o escribinos por WhatsApp.', 'error');
+      }).then(function(){ btn.disabled = false; });
+    });
+  }
+
+  /* ---- 10. Año ---- */
+  const year = $('#year');
+  if(year) year.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
