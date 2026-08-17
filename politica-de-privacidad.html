@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0B0D">
+
+<title>Política de privacidad | Estudio Contable Vélez &amp; Asociados</title>
+<meta name="description" content="Cómo Estudio Contable Vélez & Asociados trata los datos personales que recibe a través de su sitio web, conforme a la Ley 25.326 de Protección de Datos Personales.">
+<!-- ⚠️ PREVIEW: noindex mientras el sitio vive en la URL de demo.
+     AL PUBLICAR, reemplazar por: <meta name="robots" content="index, follow"> -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.estudiovyasociados.com.ar/politica-de-privacidad.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0B0D'/%3E%3Cg fill='none' stroke='%23F6F4F0' stroke-width='4'%3E%3Cpath d='M24 22 L50 78 L76 22'/%3E%3C/g%3E%3C/svg%3E">
+
+<style>
+/* =========================================================================
+   VÉLEZ & ASOCIADOS — Página legal
+   Mismo bloque de estilos que politica-de-cookies.html. Si tocás uno,
+   replicá el cambio en el otro (y los tokens en index.html).
+   ========================================================================= */
+
+/* ---- TOKENS (espejo de index.html) ---- */
+:root{
+  --ink:#0A0B0D; --ink-2:#101216; --ink-3:#171A1F;
+  --ink-line:rgba(246,244,240,.11); --ink-line-2:rgba(246,244,240,.22);
+  --paper:#F6F4F0; --paper-2:#EFEBE4; --paper-3:#E3DED4;
+  --text:#12141A; --text-2:#4A4F59; --text-3:#7A8089;
+  --on-ink:#F6F4F0; --on-ink-2:rgba(246,244,240,.66); --on-ink-3:rgba(246,244,240,.42);
+  --gold:#C0A265; --gold-soft:#DFC894; --gold-dim:rgba(192,162,101,.16);
+  --font-display:"Instrument Serif","Times New Roman",Georgia,serif;
+  --font-sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --pad-x:clamp(1.25rem,4vw,3.5rem);
+  --maxw:1240px; --r-sm:6px; --r-md:12px; --r-lg:20px;
+  --ease:cubic-bezier(.22,.61,.36,1); --ease-out:cubic-bezier(.16,1,.3,1);
+}
+
+/* ---- BASE ---- */
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; overflow-x:clip; }
+body{
+  margin:0; overflow-x:clip; background:var(--paper); color:var(--text);
+  font-family:var(--font-sans); font-size:1rem; line-height:1.7; letter-spacing:-.005em;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+img,svg{ max-width:100%; display:block; }
+a{ color:inherit; }
+h1,h2,h3{ margin:0; font-weight:400; letter-spacing:-.02em; line-height:1.12; }
+p{ margin:0; }
+ul,ol{ margin:0; padding:0; list-style:none; }
+table{ border-collapse:collapse; width:100%; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+::selection{ background:var(--gold); color:var(--ink); }
+
+.container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad-x); }
+
+/* ---- MARCA ---- */
+.brand{ display:inline-flex; align-items:center; gap:.8rem; color:var(--on-ink); }
+.brand__mark{ width:36px; height:36px; flex:none; }
+.brand__text{ display:flex; flex-direction:column; line-height:1; }
+.brand__name{ font-family:var(--font-display); font-size:1.12rem; }
+.brand__tag{
+  font-size:.56rem; letter-spacing:.19em; text-transform:uppercase;
+  color:var(--on-ink-3); margin-top:.32rem; font-weight:500; white-space:nowrap;
+}
+
+/* ---- HEADER ---- */
+.header{ background:var(--ink); color:var(--on-ink); padding-block:1.15rem; }
+.header__inner{ display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+.back{
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-size:.84rem; font-weight:500; color:var(--on-ink-2);
+  text-decoration:none; transition:color .3s var(--ease);
+}
+.back:hover{ color:var(--gold); }
+.back svg{ width:15px; height:15px; transition:transform .35s var(--ease-out); }
+.back:hover svg{ transform:translateX(-3px); }
+
+/* ---- ENCABEZADO DE LA PÁGINA ---- */
+.hero{
+  background:var(--ink); color:var(--on-ink);
+  padding-block:clamp(3rem,7vw,5rem) clamp(3.5rem,8vw,6rem);
+  border-bottom:1px solid var(--ink-line);
+}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:.7rem;
+  font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--on-ink-3);
+}
+.eyebrow::before{ content:""; width:28px; height:1px; background:var(--gold); }
+.hero h1{
+  font-family:var(--font-display); font-size:clamp(2.2rem,1.6rem + 2.4vw,3.6rem);
+  margin-top:1.2rem; max-width:18ch;
+}
+.hero h1 em{ font-style:italic; color:var(--gold-soft); }
+.hero p{ margin-top:1.4rem; color:var(--on-ink-2); max-width:56ch; }
+.updated{
+  display:inline-block; margin-top:1.8rem; padding:.5rem 1rem;
+  border:1px solid var(--ink-line); border-radius:999px;
+  font-size:.78rem; color:var(--on-ink-3);
+}
+
+/* ---- CUERPO LEGAL ---- */
+.layout{
+  display:grid; grid-template-columns:250px 1fr;
+  gap:clamp(2.5rem,5vw,4.5rem);
+  padding-block:clamp(3rem,6vw,5rem);
+  align-items:start;
+}
+.layout > *{ min-width:0; }
+
+/* Índice */
+.toc{ position:sticky; top:2rem; }
+.toc h2{
+  font-size:.7rem; letter-spacing:.15em; text-transform:uppercase;
+  font-weight:600; color:var(--text-3); font-family:var(--font-sans);
+  padding-bottom:.9rem; border-bottom:1px solid var(--paper-3);
+}
+.toc ol{ counter-reset:toc; margin-top:.4rem; }
+.toc li{ counter-increment:toc; }
+.toc a{
+  display:flex; gap:.7rem; padding:.5rem 0; font-size:.86rem;
+  color:var(--text-2); text-decoration:none; line-height:1.45;
+  transition:color .3s var(--ease), padding-left .3s var(--ease-out);
+}
+.toc a::before{ content:counter(toc,decimal-leading-zero); color:var(--gold); font-size:.72rem; font-weight:600; padding-top:.15rem; }
+.toc a:hover{ color:var(--text); padding-left:.3rem; }
+
+/* Prosa */
+.prose{ max-width:68ch; }
+.prose section + section{ margin-top:clamp(2.5rem,4vw,3.4rem); }
+.prose h2{
+  font-family:var(--font-display); font-size:clamp(1.5rem,1.3rem + .8vw,2rem);
+  padding-top:1.6rem; border-top:1px solid var(--paper-3);
+}
+.prose section:first-child h2{ padding-top:0; border-top:0; }
+.prose h3{
+  font-family:var(--font-sans); font-size:1rem; font-weight:600;
+  margin-top:1.8rem; letter-spacing:-.01em;
+}
+.prose p{ margin-top:1.1rem; color:var(--text-2); }
+.prose strong{ color:var(--text); font-weight:600; }
+.prose a{ color:var(--text); text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--gold); }
+.prose a:hover{ color:var(--gold); }
+.prose ul{ margin-top:1.1rem; display:grid; gap:.7rem; }
+.prose ul li{
+  position:relative; padding-left:1.5rem; color:var(--text-2);
+}
+.prose ul li::before{
+  content:""; position:absolute; left:0; top:.72em;
+  width:6px; height:1px; background:var(--gold);
+}
+.prose ul li strong{ color:var(--text); }
+
+/* Ficha de datos del responsable */
+.datos{
+  margin-top:1.4rem; border:1px solid var(--paper-3); border-radius:var(--r-md);
+  background:var(--paper-2); padding:clamp(1.2rem,2.5vw,1.7rem);
+  display:grid; gap:.85rem;
+}
+.datos div{ display:grid; grid-template-columns:150px 1fr; gap:1rem; font-size:.92rem; }
+.datos dt{
+  font-size:.7rem; letter-spacing:.12em; text-transform:uppercase;
+  font-weight:600; color:var(--text-3); padding-top:.15rem;
+}
+.datos dd{ margin:0; color:var(--text); }
+
+/* Aviso editable */
+.aviso{
+  margin-top:1.4rem; border-left:2px solid var(--gold); background:var(--gold-dim);
+  padding:1rem 1.2rem; font-size:.88rem; color:var(--text-2); border-radius:0 var(--r-sm) var(--r-sm) 0;
+}
+.aviso strong{ color:var(--text); }
+
+/* ---- FOOTER ---- */
+.footer{ background:var(--ink); color:var(--on-ink); padding-block:2.2rem; }
+.footer__inner{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1.2rem; flex-wrap:wrap; font-size:.8rem; color:var(--on-ink-3);
+}
+.footer__links{ display:flex; gap:1.4rem; flex-wrap:wrap; }
+.footer__links a{ text-decoration:none; transition:color .3s var(--ease); }
+.footer__links a:hover{ color:var(--gold); }
+
+@media (max-width:900px){
+  .layout{ grid-template-columns:1fr; }
+  .toc{ position:static; border-bottom:1px solid var(--paper-3); padding-bottom:1rem; }
+  .toc ol{ columns:2; column-gap:1.5rem; }
+}
+@media (max-width:640px){
+  .toc ol{ columns:1; }
+  .datos div{ grid-template-columns:1fr; gap:.2rem; }
+  .brand__tag{ display:none; }
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ transition-duration:.001ms !important; }
+  html{ scroll-behavior:auto; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand" style="text-decoration:none" aria-label="Vélez &amp; Asociados — Inicio">
+      <svg class="brand__mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="96" height="96" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+        <circle cx="38" cy="38" r="27" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
+        <path d="M17 16 L50 84 L83 16" stroke="currentColor" stroke-width="5.5"/>
+        <path d="M31 16 L50 55 L69 16" stroke="var(--ink)" stroke-width="4.5"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">Vélez <em style="font-style:normal;color:var(--gold)">&amp;</em> Asociados</span>
+        <span class="brand__tag">Estudio Contable · Consultora PyME</span>
+      </span>
+    </a>
+    <a class="back" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      Volver al inicio
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Legales</p>
+    <h1>Política de <em>privacidad</em></h1>
+    <p>Cómo tratamos los datos personales que recibimos a través de este sitio, conforme a la
+      Ley 25.326 de Protección de Datos Personales de la República Argentina.</p>
+    <p class="updated">Última actualización: 17 de agosto de 2026</p>
+  </div>
+</section>
+
+<div class="container layout">
+
+  <nav class="toc" aria-label="Índice de la política">
+    <h2>Contenido</h2>
+    <ol>
+      <li><a href="#responsable">Responsable del tratamiento</a></li>
+      <li><a href="#datos">Datos que recolectamos</a></li>
+      <li><a href="#finalidad">Para qué los usamos</a></li>
+      <li><a href="#base">Base del tratamiento</a></li>
+      <li><a href="#plazo">Cuánto los conservamos</a></li>
+      <li><a href="#terceros">Con quiénes los compartimos</a></li>
+      <li><a href="#seguridad">Seguridad de la información</a></li>
+      <li><a href="#derechos">Tus derechos</a></li>
+      <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#menores">Menores de edad</a></li>
+      <li><a href="#cambios">Cambios en esta política</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ol>
+  </nav>
+
+  <main class="prose">
+
+    <section id="responsable">
+      <h2>1. Responsable del tratamiento</h2>
+      <p>El responsable de la base de datos es <strong>Estudio Contable Vélez &amp; Asociados</strong>,
+        con domicilio en Ayacucho 395, Piso 7 Oficina C, X5000 Córdoba, Provincia de Córdoba,
+        República Argentina.</p>
+      <dl class="datos">
+        <div><dt>Razón social</dt><dd>[COMPLETAR: razón social inscripta]</dd></div>
+        <div><dt>CUIT</dt><dd>[COMPLETAR: CUIT]</dd></div>
+        <div><dt>Domicilio</dt><dd>Ayacucho 395, Piso 7 Of. C — X5000 Córdoba, Argentina</dd></div>
+        <div><dt>Contacto</dt><dd>[COMPLETAR: correo de contacto para temas de privacidad]</dd></div>
+      </dl>
+      <p class="aviso"><strong>Nota para el estudio:</strong> completá los campos entre corchetes con
+        los datos registrales antes de publicar. Conviene además que un profesional del derecho
+        revise este texto y lo adapte a la operatoria real del estudio.</p>
+    </section>
+
+    <section id="datos">
+      <h2>2. Datos que recolectamos</h2>
+      <p>Recolectamos únicamente los datos que vos nos proporcionás de manera voluntaria a
+        través del formulario de contacto del sitio:</p>
+      <ul>
+        <li><strong>Nombre y apellido</strong>, para dirigirnos a vos.</li>
+        <li><strong>Nombre de la empresa y actividad</strong>, para entender el contexto de la consulta.</li>
+        <li><strong>Teléfono</strong>, para responderte por llamada o WhatsApp.</li>
+        <li><strong>Servicio sobre el que consultás</strong> y el <strong>texto de tu consulta</strong>.</li>
+      </ul>
+      <p>Si en el texto libre de tu consulta incluís información adicional, esa información también
+        queda registrada. Te pedimos que no incluyas datos sensibles ni claves fiscales en ese campo:
+        cuando la gestión los requiera, te los solicitamos por un canal seguro.</p>
+      <h3>Datos de navegación</h3>
+      <p>El servidor donde está alojado el sitio puede registrar datos técnicos habituales, como la
+        dirección IP, el tipo de navegador y la fecha y hora de la visita, con fines de seguridad y
+        funcionamiento. El detalle de las cookies está en la
+        <a href="politica-de-cookies.html">política de cookies</a>.</p>
+    </section>
+
+    <section id="finalidad">
+      <h2>3. Para qué los usamos</h2>
+      <p>Usamos tus datos con estas finalidades:</p>
+      <ul>
+        <li>Responder tu consulta y darte una primera orientación profesional.</li>
+        <li>Coordinar una reunión de diagnóstico, presencial o por videollamada.</li>
+        <li>Elaborar y enviarte una propuesta de servicios, si la pedís.</li>
+        <li>Mantener el registro de las comunicaciones vinculadas a tu consulta.</li>
+      </ul>
+      <p>Tus datos se usan para esas finalidades y para dar cumplimiento a las obligaciones legales
+        que correspondan.</p>
+    </section>
+
+    <section id="base">
+      <h2>4. Base del tratamiento</h2>
+      <p>El tratamiento se realiza sobre la base de <strong>tu consentimiento libre, expreso e
+        informado</strong>, que prestás al marcar la casilla de aceptación y enviar el formulario,
+        conforme al artículo 5 de la Ley 25.326.</p>
+      <p>Podés revocar ese consentimiento en cualquier momento, sin que ello afecte la licitud del
+        tratamiento previo a la revocación.</p>
+    </section>
+
+    <section id="plazo">
+      <h2>5. Cuánto los conservamos</h2>
+      <p>Conservamos los datos de tu consulta mientras dure la gestión y, luego, por el plazo
+        necesario para atender eventuales responsabilidades profesionales, fiscales o contables.</p>
+      <p>Si llegás a ser cliente del estudio, la conservación se rige por los plazos que la
+        normativa profesional y fiscal establece para la documentación respaldatoria.</p>
+    </section>
+
+    <section id="terceros">
+      <h2>6. Con quiénes los compartimos</h2>
+      <p>No vendemos ni cedemos tus datos personales. Compartimos información con terceros
+        únicamente en estos casos:</p>
+      <ul>
+        <li><strong>Proveedores tecnológicos</strong> que hacen funcionar el sitio: el servicio de
+          alojamiento web y el servicio que procesa el formulario de contacto. Acceden a los datos
+          en calidad de encargados del tratamiento y por nuestra instrucción.</li>
+        <li><strong>WhatsApp</strong>, cuando elegís ese canal para comunicarte. En ese caso, el
+          intercambio se rige también por las políticas de Meta Platforms.</li>
+        <li><strong>Autoridades competentes</strong>, cuando exista una orden judicial o una
+          obligación legal que así lo requiera.</li>
+      </ul>
+      <h3>Transferencias internacionales</h3>
+      <p>Algunos de estos proveedores pueden alojar información en servidores fuera de la República
+        Argentina. En esos casos procuramos que cuenten con niveles adecuados de protección,
+        conforme al artículo 12 de la Ley 25.326.</p>
+    </section>
+
+    <section id="seguridad">
+      <h2>7. Seguridad de la información</h2>
+      <p>Aplicamos medidas técnicas y organizativas razonables para resguardar los datos que nos
+        confiás: conexión cifrada mediante HTTPS, acceso restringido a la información y criterios
+        de confidencialidad profesional propios del ejercicio contable.</p>
+      <p>Ningún sistema es completamente infalible; ante un incidente que afecte tus datos actuamos
+        conforme a la normativa vigente.</p>
+    </section>
+
+    <section id="derechos">
+      <h2>8. Tus derechos</h2>
+      <p>Como titular de los datos, la Ley 25.326 te reconoce los derechos de <strong>acceso,
+        rectificación, actualización y supresión</strong> de tu información personal.</p>
+      <ul>
+        <li>El ejercicio del derecho de acceso es <strong>gratuito</strong> a intervalos no inferiores
+          a seis meses, salvo que acredites un interés legítimo (artículo 14, inciso 3).</li>
+        <li>Respondemos las solicitudes de acceso dentro de los <strong>diez días corridos</strong>, y
+          las de rectificación o supresión dentro de los <strong>cinco días hábiles</strong>.</li>
+      </ul>
+      <p>Para ejercerlos, escribinos a los datos de contacto de esta política.</p>
+      <p>La <strong>Agencia de Acceso a la Información Pública</strong>, en su carácter de autoridad
+        de aplicación de la Ley 25.326, atiende las denuncias y reclamos que se interpongan en
+        relación con el incumplimiento de las normas sobre protección de datos personales.</p>
+    </section>
+
+    <section id="cookies">
+      <h2>9. Cookies</h2>
+      <p>Este sitio utiliza cookies y tecnologías similares en la medida que se detalla en la
+        <a href="politica-de-cookies.html">política de cookies</a>, donde también encontrás cómo
+        gestionarlas desde tu navegador.</p>
+    </section>
+
+    <section id="menores">
+      <h2>10. Menores de edad</h2>
+      <p>Los servicios de este sitio están dirigidos a personas mayores de 18 años, titulares o
+        responsables de empresas y actividades económicas.</p>
+    </section>
+
+    <section id="cambios">
+      <h2>11. Cambios en esta política</h2>
+      <p>Podemos actualizar esta política para reflejar cambios en nuestros servicios o en la
+        normativa aplicable. Publicamos la versión vigente en esta misma dirección, con su fecha
+        de última actualización.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>12. Contacto</h2>
+      <p>Por cualquier consulta vinculada a esta política o al tratamiento de tus datos personales,
+        escribinos a <strong>[COMPLETAR: correo de contacto]</strong> o acercate a nuestra oficina de
+        Ayacucho 395, Piso 7 Oficina C, Córdoba, de lunes a viernes de 9 a 18 h.</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year">2026</span> Estudio Contable Vélez &amp; Asociados</p>
+    <nav class="footer__links">
+      <a href="index.html">Inicio</a>
+      <a href="politica-de-cookies.html">Política de cookies</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

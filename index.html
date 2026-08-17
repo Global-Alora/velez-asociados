@@ -1941,7 +1941,7 @@ document.documentElement.classList.add('js');
         <label class="consent">
           <input type="checkbox" id="consent" name="consent" required>
           <span>Autorizo el uso de mis datos para responder esta consulta, conforme a la
-            <a href="#privacidad">política de privacidad</a>. <i>*</i></span>
+            <a href="politica-de-privacidad.html" target="_blank" rel="noopener">política de privacidad</a>. <i>*</i></span>
         </label>
 
         <div class="form__submit">
@@ -2065,7 +2065,9 @@ document.documentElement.classList.add('js');
   <div class="container">
     <div class="footer__bottom">
       <p>© <span id="year">2026</span> Estudio Contable Vélez &amp; Asociados. Todos los derechos reservados.</p>
-      <p><a href="#privacidad">Política de privacidad</a> · Sitio desarrollado por <a href="#" rel="noopener">ALORA</a></p>
+      <p><a href="politica-de-privacidad.html">Política de privacidad</a> ·
+        <a href="politica-de-cookies.html">Política de cookies</a> ·
+        Sitio desarrollado por <a href="#" rel="noopener">ALORA</a></p>
     </div>
   </div>
 </footer>
@@ -2358,9 +2360,9 @@ document.documentElement.classList.add('js');
         body: new FormData(form)
       }).then(function(r){
         if(!r.ok) throw new Error('HTTP ' + r.status);
-        setStatus('Recibimos tu consulta. Te respondemos dentro de las 48 h hábiles.', 'ok');
-        form.reset();
-        if(counter){ counter.textContent = '0 / ' + MSG_MIN; counter.classList.remove('is-ok'); }
+        // Envío correcto: llevamos a la página de agradecimiento.
+        // Es también el destino que hay que medir como conversión.
+        window.location.href = 'gracias.html';
       }).catch(function(){
         setStatus('No pudimos enviar la consulta. Probá de nuevo o escribinos por WhatsApp.', 'error');
       }).then(function(){ btn.disabled = false; });
