@@ -247,8 +247,12 @@ table{ border-collapse:collapse; width:100%; }
 
 .btn--ghost{ --btn-bg:transparent; --btn-fg:var(--text); --btn-bd:var(--paper-3); }
 .btn--ghost:hover{ --btn-bd:var(--text); box-shadow:none; }
-.section--ink .btn--ghost,.hero .btn--ghost{ --btn-fg:var(--on-ink); --btn-bd:var(--ink-line-2); }
-.section--ink .btn--ghost:hover,.hero .btn--ghost:hover{ --btn-bd:var(--on-ink); background:rgba(246,244,240,.06); }
+/* Superficies oscuras: el fantasma necesita texto claro. Si agregás un bloque
+   oscuro nuevo con botones fantasma, sumá su selector acá. */
+.section--ink .btn--ghost,.hero .btn--ghost,
+.cookies .btn--ghost,.mobile-bar .btn--ghost{ --btn-fg:var(--on-ink); --btn-bd:var(--ink-line-2); }
+.section--ink .btn--ghost:hover,.hero .btn--ghost:hover,
+.cookies .btn--ghost:hover,.mobile-bar .btn--ghost:hover{ --btn-bd:var(--on-ink); background:rgba(246,244,240,.06); }
 
 .btn--dark{ --btn-bg:var(--ink); --btn-fg:var(--on-ink); --btn-bd:var(--ink); }
 .btn--dark:hover{ box-shadow:0 12px 28px -12px rgba(10,11,13,.5); }
@@ -922,6 +926,13 @@ table{ border-collapse:collapse; width:100%; }
   font-size:.78rem; color:var(--on-ink-3);
 }
 .footer__bottom a:hover{ color:var(--gold); }
+.link-boton{
+  background:none; border:0; padding:0; cursor:pointer;
+  font-size:inherit; color:inherit; font-family:inherit;
+  text-decoration:underline; text-underline-offset:2px;
+  transition:color .3s var(--ease);
+}
+.link-boton:hover{ color:var(--gold); }
 /* Botón flotante de WhatsApp */
 .wa-float{
   position:fixed; left:clamp(1rem,3vw,2rem); bottom:clamp(1rem,3vw,2rem); z-index:90;
@@ -956,9 +967,57 @@ table{ border-collapse:collapse; width:100%; }
 .mobile-bar .btn--icon{ flex:none; width:48px; height:48px; padding:0; border-radius:50%; }
 .mobile-bar .btn--icon svg{ width:19px; height:19px; }
 .mobile-bar .btn--cta{ flex:1; }
-/* La barra es oscura: el botón fantasma necesita texto claro */
-.mobile-bar .btn--ghost{ --btn-fg:var(--on-ink); --btn-bd:var(--ink-line-2); }
-.mobile-bar .btn--ghost:hover{ --btn-bd:var(--on-ink); }
+
+/* -- Banner de cookies -- */
+.cookies{
+  position:fixed; z-index:130;
+  left:clamp(1rem,3vw,2rem); bottom:clamp(1rem,3vw,2rem);
+  width:min(430px,calc(100vw - 2rem));
+  background:rgba(16,18,22,.94); backdrop-filter:blur(18px) saturate(1.3);
+  border:1px solid var(--ink-line-2); border-radius:var(--r-lg);
+  padding:clamp(1.3rem,2.5vw,1.7rem); color:var(--on-ink);
+  box-shadow:0 28px 60px -24px rgba(0,0,0,.75);
+  opacity:0; visibility:hidden; transform:translateY(18px) scale(.98);
+  transition:opacity .5s var(--ease), transform .6s var(--ease-out), visibility .5s;
+}
+.cookies.is-open{ opacity:1; visibility:visible; transform:none; }
+.cookies__head{ display:flex; align-items:center; gap:.7rem; }
+.cookies__head svg{ width:19px; height:19px; color:var(--gold); flex:none; }
+.cookies__head h2{
+  font-family:var(--font-sans); font-size:.72rem; letter-spacing:.15em;
+  text-transform:uppercase; font-weight:600; color:var(--on-ink-2);
+}
+.cookies p{
+  margin-top:.9rem; font-size:.85rem; line-height:1.6; color:var(--on-ink-2);
+}
+.cookies p a{ color:var(--gold); text-decoration:underline; text-underline-offset:2px; }
+.cookies__acciones{ display:grid; gap:.55rem; margin-top:1.3rem; }
+.cookies__acciones .btn{ width:100%; padding-block:.8rem; }
+.cookies__fila{ display:grid; grid-template-columns:1fr 1fr; gap:.55rem; }
+.cookies__link{
+  margin-top:.9rem; display:block; text-align:center;
+  font-size:.76rem; color:var(--on-ink-3); text-decoration:underline;
+  text-underline-offset:2px; transition:color .3s var(--ease);
+}
+.cookies__link:hover{ color:var(--on-ink); }
+
+/* Mientras el banner espera respuesta, no compite con la barra inferior */
+body.cookies-abierto .mobile-bar{ display:none; }
+
+/* Mapa bloqueado hasta que haya consentimiento */
+.map__consent{
+  position:absolute; inset:0; z-index:2; display:none;
+  flex-direction:column; align-items:center; justify-content:center; gap:.9rem;
+  text-align:center; padding:clamp(1.2rem,3vw,2rem);
+  background:var(--paper-2);
+}
+.map__consent.is-shown{ display:flex; }
+.map__consent svg{ width:26px; height:26px; color:var(--gold); }
+.map__consent p{ font-size:.86rem; line-height:1.6; color:var(--text-2); max-width:38ch; }
+.map__consent a{
+  font-size:.78rem; color:var(--text-3); text-decoration:underline; text-underline-offset:2px;
+}
+.map__consent a:hover{ color:var(--gold); }
 
 .to-top{
   position:fixed; right:clamp(1rem,3vw,2rem); bottom:clamp(1rem,3vw,2rem); z-index:90;
@@ -1825,8 +1884,18 @@ document.documentElement.classList.add('js');
         </div>
       </div>
 
-      <!-- Mapa con carga diferida para no penalizar el LCP -->
+      <!-- Mapa con carga diferida. Sólo se carga si hay consentimiento de cookies
+           de terceros; si no, se muestra el aviso de abajo. -->
       <div class="map map--light" id="map" data-reveal style="--d:.08s">
+        <div class="map__consent" id="mapConsent">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p>El mapa se muestra desde Google Maps, que instala cookies de terceros.
+            Estamos en <strong>Ayacucho 395, Piso 7 Of. C</strong>, Córdoba.</p>
+          <button class="btn btn--dark btn--sm" type="button" id="mapLoad">
+            <span>Ver el mapa acá</span>
+          </button>
+          <a href="https://maps.app.goo.gl/wVXTVe7ze9c1tKPV9" target="_blank" rel="noopener">Abrirlo en Google Maps</a>
+        </div>
         <span class="map__ph">Cargando mapa…</span>
         <iframe
           data-src="https://www.google.com/maps?q=Ayacucho%20395%2C%20C%C3%B3rdoba%2C%20Argentina&amp;z=16&amp;output=embed"
@@ -2067,6 +2136,7 @@ document.documentElement.classList.add('js');
       <p>© <span id="year">2026</span> Estudio Contable Vélez &amp; Asociados. Todos los derechos reservados.</p>
       <p><a href="politica-de-privacidad.html">Política de privacidad</a> ·
         <a href="politica-de-cookies.html">Política de cookies</a> ·
+        <button type="button" id="cookiesReabrir" class="link-boton">Configurar cookies</button> ·
         Sitio desarrollado por <a href="#" rel="noopener">ALORA</a></p>
     </div>
   </div>
@@ -2090,6 +2160,30 @@ document.documentElement.classList.add('js');
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.05-1 .05-1.6-.15-.9-.3-3-1.2-4.5-3.5-.55-.85-1-1.9-1-2.9 0-.9.45-1.35.65-1.6.2-.2.45-.3.65-.3h.45c.2 0 .35.05.5.4l.7 1.7c.05.15.1.3 0 .5l-.35.5c-.1.15-.25.25-.1.5.15.3.6 1 1.2 1.5.75.7 1.35.9 1.6 1 .2.1.35.05.5-.1l.6-.7c.15-.2.3-.15.5-.1l1.6.75c.3.15.35.25.35.45.05.2 0 .7-.2 1.15z"/></svg>
   <span>WhatsApp</span>
 </a>
+
+<!-- Banner de cookies: se muestra hasta que la persona elige una opción -->
+<aside class="cookies" id="cookies" role="dialog" aria-live="polite"
+       aria-label="Preferencias de cookies" aria-describedby="cookiesTexto">
+  <div class="cookies__head">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+      <path d="M12 3a9 9 0 1 0 9 9 4 4 0 0 1-5-5 4 4 0 0 1-4-4z"/>
+      <path d="M9 10v.01M14 14v.01M9.5 15.5v.01"/>
+    </svg>
+    <h2>Cookies</h2>
+  </div>
+  <p id="cookiesTexto">
+    Este sitio funciona con cookies técnicas. El mapa de la sección Ubicación se carga
+    desde Google y suma cookies de terceros. Elegí qué preferís permitir.
+    <a href="politica-de-cookies.html">Ver política de cookies</a>
+  </p>
+  <div class="cookies__acciones">
+    <button class="btn" type="button" data-cookies="todas"><span>Aceptar todas</span></button>
+    <div class="cookies__fila">
+      <button class="btn btn--ghost" type="button" data-cookies="esenciales"><span>Solo esenciales</span></button>
+      <button class="btn btn--ghost" type="button" data-cookies="rechazadas"><span>Rechazar</span></button>
+    </div>
+  </div>
+</aside>
 
 <button class="to-top" id="toTop" aria-label="Volver arriba">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
@@ -2257,23 +2351,89 @@ document.documentElement.classList.add('js');
     });
   }
 
-  /* ---- 08. Mapa diferido ---- */
+  /* ---- 08. Cookies + mapa diferido ----
+     El mapa de Google instala cookies de terceros, así que sólo se carga si la
+     persona aceptó todas. Con "esenciales" o "rechazadas" se muestra un aviso con
+     la dirección y un botón para cargarlo puntualmente, sin cambiar la preferencia. */
+  const CLAVE = 'va_cookies';
+  const banner = $('#cookies');
   const map = $('#map');
+  const frame = map ? $('iframe', map) : null;
+  const ph = map ? $('.map__ph', map) : null;
+  const avisoMapa = $('#mapConsent');
+
+  function leerConsentimiento(){
+    try { return localStorage.getItem(CLAVE); } catch(e){ return null; }
+  }
+  function guardarConsentimiento(valor){
+    try { localStorage.setItem(CLAVE, valor); } catch(e){ /* modo privado */ }
+  }
+
+  function cargarMapa(){
+    if(!frame || frame.src) return;
+    frame.src = frame.getAttribute('data-src');
+    frame.addEventListener('load', function(){ if(ph) ph.remove(); });
+    if(avisoMapa) avisoMapa.classList.remove('is-shown');
+  }
+  function bloquearMapa(){
+    if(ph) ph.style.display = 'none';
+    if(avisoMapa) avisoMapa.classList.add('is-shown');
+  }
+
+  // El mapa se carga al acercarse, siempre que haya consentimiento
   if(map){
-    const frame = $('iframe', map);
-    const ph = $('.map__ph', map);
-    function loadMap(){
-      if(frame.src) return;
-      frame.src = frame.getAttribute('data-src');
-      frame.addEventListener('load', function(){ if(ph) ph.remove(); });
+    function intentarCargar(){
+      if(leerConsentimiento() === 'todas') cargarMapa();
+      else bloquearMapa();
     }
     if('IntersectionObserver' in window){
       const ioMap = new IntersectionObserver(function(entries){
-        if(entries[0].isIntersecting){ loadMap(); ioMap.disconnect(); }
+        if(entries[0].isIntersecting){ intentarCargar(); ioMap.disconnect(); }
       }, {rootMargin:'300px'});
       ioMap.observe(map);
-    } else { loadMap(); }
+    } else { intentarCargar(); }
   }
+
+  // Carga puntual desde el aviso, sin tocar la preferencia guardada
+  const btnMapa = $('#mapLoad');
+  if(btnMapa) btnMapa.addEventListener('click', cargarMapa);
+
+  // Banner
+  function abrirBanner(){
+    if(!banner) return;
+    banner.classList.add('is-open');
+    document.body.classList.add('cookies-abierto');
+  }
+  function cerrarBanner(){
+    if(!banner) return;
+    banner.classList.remove('is-open');
+    document.body.classList.remove('cookies-abierto');
+  }
+  if(banner){
+    if(!leerConsentimiento()){
+      // Pequeña espera para no tapar el hero apenas entra
+      setTimeout(abrirBanner, 900);
+    }
+    $$('[data-cookies]', banner).forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const valor = btn.getAttribute('data-cookies');
+        guardarConsentimiento(valor);
+        cerrarBanner();
+        if(valor === 'todas'){
+          // Si ya se había bloqueado el mapa en esta visita, lo cargamos ahora
+          const r = map ? map.getBoundingClientRect() : null;
+          if(r && r.top < window.innerHeight + 300) cargarMapa();
+        } else {
+          bloquearMapa();
+        }
+      });
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && banner.classList.contains('is-open')) cerrarBanner();
+    });
+  }
+  const reabrir = $('#cookiesReabrir');
+  if(reabrir) reabrir.addEventListener('click', abrirBanner);
 
   /* ---- 09. Formulario ---- */
   const form = $('#form');
